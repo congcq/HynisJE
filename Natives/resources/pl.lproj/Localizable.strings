@@ -57,13 +57,13 @@
 "custom_controls.control_menu.add_drawer" = "Dodaj listę";
 "custom_controls.hint" = "Naciśnij i przytrzymaj gdziekolwiek na ekranie, aby uzyskać więcej opcji";
 
-"init.migrateDir" = "Katalogiem danych Amethyst jest teraz %@. Wszystkie istniejące dane zostały przeniesione do nowej lokalizacji.";
+"init.migrateDir" = "Katalogiem danych Hynis jest teraz %@. Wszystkie istniejące dane zostały przeniesione do nowej lokalizacji.";
 
 "launcher.menu.custom_controls" = "Sterowanie";
 "launcher.menu.install_jar" = "Zainstaluj .jar";
 
 "launcher.wait_jit.title" = "Czekam na JIT";
-"launcher.wait_jit.message" = "Amethyst opiera się na kompilacji Just-in-time, aby Java działała z maksymalną wydajnością.";
+"launcher.wait_jit.message" = "Hynis opiera się na kompilacji Just-in-time, aby Java działała z maksymalną wydajnością.";
 
 "login.error.username.outOfRange" = "Nazwa użytkownika musi zawierać od 3 do 16 znaków";
 
@@ -121,7 +121,7 @@
 "preference.title.jitstreamer_server" = "Adres IP serwera JitStreamer";
 "preference.detail.jitstreamer_server" = "Pozwala na zmianę na niestandardowy adres IP serwera JitStreamer, np. dla instancji hostowanych przez siebie. Ta opcja może pozostać sama jeśli używasz domyślnych serwerów JitStreamer.";
 "preference.title.appicon" = "Ustaw ikonę aplikacji";
-"preference.detail.appicon" = "Pozwala wybrać między różnymi ikonami ekranu głównego dla Amethyst.";
+"preference.detail.appicon" = "Pozwala wybrać między różnymi ikonami ekranu głównego dla Hynis.";
 
 "preference.title.reset_warnings" = "Wyzeruj wszystkie ostrzeżenia";
 "preference.title.done.reset_warnings" = "Wszystkie ostrzeżenia zostały wyzerowane.";

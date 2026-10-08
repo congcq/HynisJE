@@ -2,8 +2,8 @@
 // Created by maks on 24.09.2022.
 //
 
-#ifndef POJAVLAUNCHER_ENVIRON_H
-#define POJAVLAUNCHER_ENVIRON_H
+#ifndef HYNISLAUNCHER_ENVIRON_H
+#define HYNISLAUNCHER_ENVIRON_H
 
 #include <stdatomic.h>
 #include "jni.h"
@@ -80,4 +80,4 @@ float resolutionScale;
 BOOL virtualMouseEnabled, isControlModifiable;
 uint64_t hwRedirectOrig[6], hwRedirectTarget[6];
 
-#endif //POJAVLAUNCHER_ENVIRON_H
+#endif //HYNISLAUNCHER_ENVIRON_H

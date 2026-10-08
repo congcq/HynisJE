@@ -211,7 +211,7 @@ BOOL convertLayoutIfNecessary(NSMutableDictionary* dict) {
 }
 
 void generateAndSaveDefaultControl() {
-    NSString *defaultPath = [NSString stringWithFormat:@"%s/controlmap/default.json", getenv("POJAV_HOME")];
+    NSString *defaultPath = [NSString stringWithFormat:@"%s/controlmap/default.json", getenv("HYNIS_HOME")];
     if ([NSFileManager.defaultManager fileExistsAtPath:defaultPath]) {
         return;
     }
@@ -360,7 +360,7 @@ void generateAndSaveDefaultControl() {
 }
 
 void generateAndSaveDefaultControlForGamepad() {
-    NSString *gamepadPath = [NSString stringWithFormat:@"%s/controlmap/gamepads/default.json", getenv("POJAV_HOME")];
+    NSString *gamepadPath = [NSString stringWithFormat:@"%s/controlmap/gamepads/default.json", getenv("HYNIS_HOME")];
     if ([NSFileManager.defaultManager fileExistsAtPath:gamepadPath]) {
         return;
     }

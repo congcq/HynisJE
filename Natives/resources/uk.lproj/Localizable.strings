@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Ця версія керування (код %d) не реалізована в збірці лаунчера.";
 "custom_controls.hint" = "Утримуйте будь-де для додаткових опцій";
 
-"init.migrateDir" = "Каталог даних Amethyst тепер у %@. Усі ваші наявні дані було переміщено в нове місце.";
+"init.migrateDir" = "Каталог даних Hynis тепер у %@. Усі ваші наявні дані було переміщено в нове місце.";
 
 "launcher.mcl.downloading_file" = "Завантажується %@";
 "launcher.mcl.error_download" = "Не вдалося завантажити %@: %@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "Встановити .jar";
 
 "launcher.wait_jit.title" = "Чекаю на JIT";
-"launcher.wait_jit.message" = "Amethyst покладається на компіляцію Just-in-time для Java задля роботи з максимальною швидкістю.";
+"launcher.wait_jit.message" = "Hynis покладається на компіляцію Just-in-time для Java задля роботи з максимальною швидкістю.";
 
 "login.error.username.outOfRange" = "Ім'я користувача повинно бути не менше 3 символів і не більше 16";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "Обліковий запис Microsoft";
 "login.option.local" = "Локальний профіль";
 
-"login.warn.title.legacy_device" = "Наступний реліз Amethyst не буде сумісний з цим пристроєм.";
+"login.warn.title.legacy_device" = "Наступний реліз Hynis не буде сумісний з цим пристроєм.";
 "login.warn.message.legacy_device" = "Щоб запустити наступний стабільний реліз, потрібен пристрій, що здатний запустити iOS 14.";
-"login.warn.title.legacy_ios" = "Для наступного релізу Amethyst необхідне оновлення системи.";
+"login.warn.title.legacy_ios" = "Для наступного релізу Hynis необхідне оновлення системи.";
 "login.warn.message.legacy_ios" = "Щоб запустити наступний стабільний реліз, потрібен пристрій, що здатний запустити iOS 14 чи новішу.";
 "login.warn.title.limited_ram" = "Цей пристрій має обмежений обсяг пам’яті.";
 "login.warn.message.limited_ram" = "Ми рекомендуємо не вимикати автоматичну оперативну пам'ять для запобігання проблем з нестабільністю та продуктивністю.";
@@ -138,11 +138,11 @@
 "preference.title.jitstreamer_server" = "JitStreamer IP сервер";
 "preference.detail.jitstreamer_server" = "Дозволяє вам змінити на користувацькі IP сервера JitStreamer, наприклад як для екземплярів свого хостингу. Цей параметр може бути у спокої, якщо ви використовуєте стандартні сервери JitStreamer.";
 "preference.title.enable_altkit" = "Увімкнути інтеграцію AltKit";
-"preference.detail.enable_altkit" = "Якщо увімкнено, Amethyst спробує приєднатися до локальних AltServers аби увімкнути JIT.";
+"preference.detail.enable_altkit" = "Якщо увімкнено, Hynis спробує приєднатися до локальних AltServers аби увімкнути JIT.";
 "preference.title.appicon" = "Встановити іконку додатка";
-"preference.detail.appicon" = "Дозволяє обрати різні значки основного екрана для Amethyst.";
-"preference.title.appicon-default" = "Знайоме світле Amethyst";
-"preference.title.appicon-dark" = "Знайоме темне Amethyst";
+"preference.detail.appicon" = "Дозволяє обрати різні значки основного екрана для Hynis.";
+"preference.title.appicon-default" = "Знайоме світле Hynis";
+"preference.title.appicon-dark" = "Знайоме темне Hynis";
 "preference.title.appicon-development" = "Планова розробка";
 "preference.title.hidden_sidebar" = "Сховати основну панель меню за замовчуванням";
 "preference.detail.hidden_sidebar" = "Дозволяє сховати бічну панель в головному меню за замовчуванням і при обертанні на iOS 14 і новіше.";
@@ -180,7 +180,7 @@
 "preference.title.fullscreen_airplay" = "Повноекранний AirPlay";
 "preference.detail.fullscreen_airplay" = "Дозволяє презентувати повноекранне вікно гри на зовнішньому дисплеї, а не віддзеркалювати все, що є на екрані.";
 "preference.title.silence_other_audio" = "Зупинити звук, коли відкривається гра";
-"preference.detail.silence_other_audio" = "Увімкніть, щоб Amethyst зупиняв звук з інших додатків, таких як \"Apple Music\" під час запуску гри.";
+"preference.detail.silence_other_audio" = "Увімкніть, щоб Hynis зупиняв звук з інших додатків, таких як \"Apple Music\" під час запуску гри.";
 "preference.title.silence_with_switch" = "Вимкнути звук беззвучним перемикачем";
 "preference.detail.silence_with_switch" = "Увімкніть, щоб вимкнути звук, якщо ввімкнено беззвучний режим. Навушники та зовнішні динаміки не впливають на це.";
 "preference.title.default_gamepad_ctrl" = "Налаштування контроллера";

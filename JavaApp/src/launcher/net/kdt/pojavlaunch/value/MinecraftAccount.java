@@ -46,7 +46,7 @@ public class MinecraftAccount
     }
 
     static {
-        System.loadLibrary("AmethystAccountJNI");
+        System.loadLibrary("HynisAccountJNI");
     }
     public static native String getAccessTokenFromKeychain(String xuid);
 }

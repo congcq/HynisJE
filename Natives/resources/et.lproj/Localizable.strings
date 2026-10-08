@@ -46,9 +46,9 @@
 "preference.section.java" = "Java trikid";
 "preference.title.cosmetica" = "Cosmetica keebid";
 "preference.title.appicon" = "Määra rakenduse ikoon";
-"preference.detail.appicon" = "Võimaldab valida Amethysti erinevate kodukuvaikoonide vahel.";
-"preference.title.appicon-default" = "Tuttav Amethyst hele";
-"preference.title.appicon-dark" = "Tuttav Amethyst tume";
+"preference.detail.appicon" = "Võimaldab valida Hynisi erinevate kodukuvaikoonide vahel.";
+"preference.title.appicon-default" = "Tuttav Hynis hele";
+"preference.title.appicon-dark" = "Tuttav Hynis tume";
 
 "preference.title.renderer" = "Renderdaja";
 

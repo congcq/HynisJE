@@ -9,9 +9,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Amethyst</string>
+	<string>Hynis</string>
 	<key>CFBundleExecutable</key>
-	<string>AngelAuraAmethyst</string>
+	<string>Hynis</string>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
@@ -74,11 +74,11 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.angelauramc.amethyst</string>
+	<string>io.github.congcq.hynis</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>AngelAuraAmethyst</string>
+	<string>Hynis</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -89,7 +89,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>org.angelauramc.amethyst.urlscheme</string>
+			<string>io.github.congcq.hynis.urlscheme</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>amethyst</string>
@@ -128,9 +128,9 @@
 		<string>_altserver._tcp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Angel Aura Amethyst uses the local network to find and communicate with AltServer and LAN servers.</string>
+	<string>Hynis uses the local network to find and communicate with AltServer and LAN servers.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Angel Aura Amethyst uses the microphone to enable support for voice chat mods.</string>
+	<string>Hynis uses the microphone to enable support for voice chat mods.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -131,14 +131,14 @@
               @"icon": @"trash",
               @"type": self.typeButton,
               @"enableCondition": ^BOOL(){
-                  NSString *demoPath = [NSString stringWithFormat:@"%s/.demo", getenv("POJAV_HOME")];
+                  NSString *demoPath = [NSString stringWithFormat:@"%s/.demo", getenv("HYNIS_HOME")];
                   int count = [NSFileManager.defaultManager contentsOfDirectoryAtPath:demoPath error:nil].count;
                   return whenNotInGame() && count > 0;
               },
               @"showConfirmPrompt": @YES,
               @"destructive": @YES,
               @"action": ^void(){
-                  NSString *demoPath = [NSString stringWithFormat:@"%s/.demo", getenv("POJAV_HOME")];
+                  NSString *demoPath = [NSString stringWithFormat:@"%s/.demo", getenv("HYNIS_HOME")];
                   NSError *error;
                   if([NSFileManager.defaultManager removeItemAtPath:demoPath error:&error]) {
                       [NSFileManager.defaultManager createDirectoryAtPath:demoPath
@@ -431,10 +431,10 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) { // Add to general section
-        return [NSString stringWithFormat:@"Angel Aura Amethyst %@-%s (%s/%s)\n%@ on %@ (%s)\nPID: %d",
+        return [NSString stringWithFormat:@"Hynis %@-%s (%s/%s)\n%@ on %@ (%s)\nPID: %d",
             NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"],
             CONFIG_TYPE, CONFIG_BRANCH, CONFIG_COMMIT,
-            UIDevice.currentDevice.completeOSVersion, [HostManager GetModelName], getenv("POJAV_DETECTEDINST"), getpid()];
+            UIDevice.currentDevice.completeOSVersion, [HostManager GetModelName], getenv("HYNIS_DETECTEDINST"), getpid()];
     }
 
     NSString *footer = NSLocalizedStringWithDefaultValue(([NSString stringWithFormat:@"preference.section.footer.%@", self.prefSections[section]]), @"Localizable", NSBundle.mainBundle, @" ", nil);

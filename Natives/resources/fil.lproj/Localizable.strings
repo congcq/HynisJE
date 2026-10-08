@@ -58,13 +58,13 @@
 "custom_controls.error.incompatible" = "This control version (code %d) is not implemented in this launcher build.";
 "custom_controls.hint" = "Long-press anywhere on screen for more options";
 
-"init.migrateDir" = "Ang direktoryo ng data ng Amethyst ay %@ na ngayon. Ang lahat ng iyong umiiral na data ay inilipat sa bagong lokasyon.";
+"init.migrateDir" = "Ang direktoryo ng data ng Hynis ay %@ na ngayon. Ang lahat ng iyong umiiral na data ay inilipat sa bagong lokasyon.";
 
 "launcher.menu.custom_controls" = "Pasadyang mga kontrol";
 "launcher.menu.install_jar" = "Install .jar";
 
 "launcher.wait_jit.title" = "Naghihintay ng JIT";
-"launcher.wait_jit.message" = "Umaasa ang Amethyst sa Just-in-time na compilation para gumana ang Java sa maximum na performance.";
+"launcher.wait_jit.message" = "Umaasa ang Hynis sa Just-in-time na compilation para gumana ang Java sa maximum na performance.";
 
 "login.error.username.outOfRange" = "Dapat ang username ay may 3 na characters na hindi dapat lalampas sa 16 na characters";
 
@@ -123,9 +123,9 @@
 "preference.title.jitstreamer_server" = "JitStreamer error: %@";
 "preference.detail.jitstreamer_server" = "Binibigyang-daan kang lumipat sa isang custom na JitStreamer server IP, tulad ng para sa mga self-host na pagkakataon. Maaaring iwanang mag-isa ang opsyong ito kung gagamitin mo ang mga default na server ng JitStreamer.";
 "preference.title.appicon" = "Set app icon";
-"preference.detail.appicon" = "Allows you to choose between different Home Screen icons for Amethyst.";
-"preference.title.appicon-default" = "Familiar Amethyst light";
-"preference.title.appicon-dark" = "Familiar Amethyst dark";
+"preference.detail.appicon" = "Allows you to choose between different Home Screen icons for Hynis.";
+"preference.title.appicon-default" = "Familiar Hynis light";
+"preference.title.appicon-dark" = "Familiar Hynis dark";
 "preference.title.hidden_sidebar" = "Hide main menu sidebar by default";
 
 "preference.title.reset_warnings" = "I-reset ang lahat ng mga babala";

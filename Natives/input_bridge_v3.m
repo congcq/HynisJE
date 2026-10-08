@@ -223,7 +223,7 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved) {
     JNIEnv *env;
     (*runtimeJavaVMPtr)->GetEnv(runtimeJavaVMPtr, (void **)&env, JNI_VERSION_1_4);
     registerOpenHandler(env);
-    if (!getenv("POJAV_SKIP_JNI_GLFW")) {
+    if (!getenv("HYNIS_SKIP_JNI_GLFW")) {
         runtimeJNIEnvPtr = env;
         JNI_OnLoadGLFW();
     }

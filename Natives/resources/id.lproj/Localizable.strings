@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Kontrol versi ini (code %d) tidak diimplementasikan di build peluncur ini.";
 "custom_controls.hint" = "Pencet lama dimanapun di layar untuk opsi tambahan";
 
-"init.migrateDir" = "Data folder Amethyst sekarang di %@. Semua datamu yang ada telah dipindah ke lokasi baru tersebut.";
+"init.migrateDir" = "Data folder Hynis sekarang di %@. Semua datamu yang ada telah dipindah ke lokasi baru tersebut.";
 
 "launcher.mcl.downloading_file" = "Mengunduh %@";
 "launcher.mcl.error_download" = "Gagal untuk mengunduh %@: %@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "Install .jar";
 
 "launcher.wait_jit.title" = "Menunggu JIT";
-"launcher.wait_jit.message" = "Amethyst membutuhkan compilation Just-in-Time agar Java dapat bekerja dalam perfoma maksimal.";
+"launcher.wait_jit.message" = "Hynis membutuhkan compilation Just-in-Time agar Java dapat bekerja dalam perfoma maksimal.";
 
 "login.error.username.outOfRange" = "Nama pengguna harus minimal mempunyai 3 karakter dan maksimal 16 karakter";
 
@@ -86,9 +86,9 @@
 "login.option.microsoft" = "Akun Microsoft";
 "login.option.local" = "Akun lokal";
 
-"login.warn.title.legacy_device" = "Rilis Amethyst selanjutnya tidak kompatibel dengan perangkat ini.";
+"login.warn.title.legacy_device" = "Rilis Hynis selanjutnya tidak kompatibel dengan perangkat ini.";
 "login.warn.message.legacy_device" = "Untuk menggunakan rilis selanjutnya, perangkat yang dapat menggunakan iOS 14 diperlukan.";
-"login.warn.title.legacy_ios" = "Rilis Amethyst selanjutnya memerlukan pembaruan sistem.";
+"login.warn.title.legacy_ios" = "Rilis Hynis selanjutnya memerlukan pembaruan sistem.";
 "login.warn.message.legacy_ios" = "Untuk menggunakan rilis selanjutnya, perangkat yang dapat menggunakan iOS 14 diperlukan.";
 "login.warn.title.limited_ram" = "Perangkat ini memiliki jumlah memori terbatas yang tersedia.";
 
@@ -136,9 +136,9 @@
 "preference.title.jitstreamer_server" = "IP server JitStreamer";
 "preference.detail.jitstreamer_server" = "Memperbolehkan anda untuk mengganti ke sebuah IP server JitStream kustom, seperti untuk instansi yang dihost sendiri. Opsi ini bisa dibiarkan jika anda menggunakan server JitStreamer bawaan.";
 "preference.title.appicon" = "Atur ikon aplikasi";
-"preference.detail.appicon" = "Memperbolehkan anda untuk memilih antara beberapa ikon layar rumah berbeda untuk Amethyst.";
-"preference.title.appicon-default" = "Familiar Amethyst light";
-"preference.title.appicon-dark" = "Familiar Amethyst dark";
+"preference.detail.appicon" = "Memperbolehkan anda untuk memilih antara beberapa ikon layar rumah berbeda untuk Hynis.";
+"preference.title.appicon-default" = "Familiar Hynis light";
+"preference.title.appicon-dark" = "Familiar Hynis dark";
 "preference.title.hidden_sidebar" = "Sembunyikan sidebar menu utama secara default";
 "preference.detail.hidden_sidebar" = "Memperbolehkan anda untuk menyembunyikan sidebar di menu utama secara default dan saat mengubah orientasi di iOS 14 dan lebih baru.";
 

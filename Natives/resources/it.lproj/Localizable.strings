@@ -49,13 +49,13 @@
 "custom_controls.control_menu.add_button" = "Aggiungi pulsante";
 "custom_controls.hint" = "Tieni premuto ovunque sullo schermo per più opzioni";
 
-"init.migrateDir" = "La nuova cartella di Amethyst è %@. Tutti i tuoi dati esistenti sono stati spostati.";
+"init.migrateDir" = "La nuova cartella di Hynis è %@. Tutti i tuoi dati esistenti sono stati spostati.";
 
 "launcher.menu.custom_controls" = "Controlli personalizzati";
 "launcher.menu.install_jar" = "Installa .jar";
 
 "launcher.wait_jit.title" = "In attesa di JIT";
-"launcher.wait_jit.message" = "Amethyst si basa sulla compilazione Just-in-time per Java per lavorare con prestazioni migliori.";
+"launcher.wait_jit.message" = "Hynis si basa sulla compilazione Just-in-time per Java per lavorare con prestazioni migliori.";
 
 "login.alert.field.username" = "Nome utente";
 
@@ -107,7 +107,7 @@
 "preference.title.debug_logging" = "Logs di Debug";
 "preference.detail.debug_logging" = "Registra le impostazioni interne e le azioni su latestlog.txt. Questo aiuta gli sviluppatori a trovare problemi più facilmente, ma le prestazioni di Minecraft potrebbero risentirne a causa della scrittura dei registri.";
 "preference.title.appicon" = "Cambia icona app";
-"preference.detail.appicon" = "Ti consente di scegliere icone diverse di Amethyst sulla Schermata Home.";
+"preference.detail.appicon" = "Ti consente di scegliere icone diverse di Hynis sulla Schermata Home.";
 
 "preference.title.reset_warnings" = "Ripristina gli avvisi";
 "preference.title.done.reset_warnings" = "Tutti gli avvisi sono stati resettati.";

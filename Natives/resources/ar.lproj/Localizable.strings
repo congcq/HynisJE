@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "هذا الإصدار للتحكم (الرمز %d) لم يتم تنفيذه في إنشاء هذا المشغل.";
 "custom_controls.hint" = "اضغط مطولاً في أي مكان على الشاشة لمزيد من الخيارات";
 
-"init.migrateDir" = "دليل بيانات Amethyst هو الآن %@. تم نقل جميع بياناتك الموجودة إلى الموقع الجديد.";
+"init.migrateDir" = "دليل بيانات Hynis هو الآن %@. تم نقل جميع بياناتك الموجودة إلى الموقع الجديد.";
 
 "launcher.mcl.downloading_file" = "التحميل جارٍ %@";
 "launcher.mcl.error_download" = "فشل التنزيل %@: %@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "تثبيت ملف .jar";
 
 "launcher.wait_jit.title" = "انتظر JIT";
-"launcher.wait_jit.message" = "يعتمد Amethyst على تجميع Just-in-time لـ Java للعمل بأقصى قدر من الأداء.";
+"launcher.wait_jit.message" = "يعتمد Hynis على تجميع Just-in-time لـ Java للعمل بأقصى قدر من الأداء.";
 
 "login.error.username.outOfRange" = "يجب أن يكون إسم المستخدم بين 3 و 16 حرف";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "حساب مايكروسوفت";
 "login.option.local" = "حساب محلي";
 
-"login.warn.title.legacy_device" = "الإصدار القادم من Amethyst لن يكون متوافقاً مع هذا الجهاز.";
+"login.warn.title.legacy_device" = "الإصدار القادم من Hynis لن يكون متوافقاً مع هذا الجهاز.";
 "login.warn.message.legacy_device" = "لتشغيل الإصدار الرئيسي التالي، يلزم جهاز قادر على تشغيل iOS 14.";
-"login.warn.title.legacy_ios" = "الإصدار القادم من Amethyst سيتطلب تحديث النظام.";
+"login.warn.title.legacy_ios" = "الإصدار القادم من Hynis سيتطلب تحديث النظام.";
 "login.warn.message.legacy_ios" = "لتشغيل الإصدار الرئيسي التالي، يحتاج هذا الجهاز إلى تشغيل iOS 14 أو أعلى.";
 "login.warn.title.limited_ram" = "هذا الجهاز لديه كمية محدودة من الذاكرة المتوفرة.";
 "login.warn.message.limited_ram" = "نوصي بترك ذاكرة الوصول العشوائي تلقائياً ممكناً لمنع عدم الاستقرار ومشاكل في الأداء.";
@@ -117,7 +117,7 @@
 
 "preference.section.general" = "إعدادات عامة";
 "preference.section.video" = "إعدادات الفيديو والصوت";
-"preference.section.footer.video" = "يسمح المعرض التلقائي لـ Amethyst باختيار أفضل خيار استناداً إلى إصدار Minecraft. تخفيض الدقة يقلل من عبء العمل في GPU من أجل أداء أفضل.";
+"preference.section.footer.video" = "يسمح المعرض التلقائي لـ Hynis باختيار أفضل خيار استناداً إلى إصدار Minecraft. تخفيض الدقة يقلل من عبء العمل في GPU من أجل أداء أفضل.";
 "preference.section.control" = "تخصيص التحكم";
 "preference.section.debug" = "إعدادات تصحيح أخطاء واجهة المستخدم";
 "preference.section.footer.debug" = "بصرف النظر عن تصحيح الأخطاء، قد تكون هذه الإعدادات مفيدة للتحكم المخصص. قد تحتاج إلى إعادة تشغيل المشغل حتى تصبح التغييرات نافذة المفعول.";
@@ -140,11 +140,11 @@
 "preference.title.jitstreamer_server" = "عنوان خادم JitStreamer: %@";
 "preference.detail.jitstreamer_server" = "يسمح لك بالتغيير إلى عنوان IP لخادم JitStreamer مخصص، على سبيل المثال للحالات التي تستضيف نفسها. يمكن ترك هذا الخيار لوحده إذا كنت تستخدم خوادم JitStreamer الافتراضية.";
 "preference.title.enable_altkit" = "تمكين تكامل AltKit";
-"preference.detail.enable_altkit" = "عند التمكين، سيحاول Amethyst الاتصال بAltServers المحلية لتمكين JIT.";
+"preference.detail.enable_altkit" = "عند التمكين، سيحاول Hynis الاتصال بAltServers المحلية لتمكين JIT.";
 "preference.title.appicon" = "تعيين أيقونة التطبيق";
-"preference.detail.appicon" = "يسمح لك بالاختيار بين أيقونات الشاشة الرئيسية المختلفة لـ Amethyst.";
-"preference.title.appicon-default" = "مضيء Amethyst المألوف";
-"preference.title.appicon-dark" = "داكن Amethyst المألوف";
+"preference.detail.appicon" = "يسمح لك بالاختيار بين أيقونات الشاشة الرئيسية المختلفة لـ Hynis.";
+"preference.title.appicon-default" = "مضيء Hynis المألوف";
+"preference.title.appicon-dark" = "داكن Hynis المألوف";
 "preference.title.appicon-development" = "التطوير المخطط";
 "preference.title.hidden_sidebar" = "إخفاء الشريط الجانبي للقائمة الرئيسية افتراضياً";
 "preference.detail.hidden_sidebar" = "يسمح لك بإخفاء الشريط الجانبي في القائمة الرئيسية بشكل افتراضي وعند الدوران.";
@@ -182,7 +182,7 @@
 "preference.title.fullscreen_airplay" = "AirPlay ملء الشاشة";
 "preference.detail.fullscreen_airplay" = "يسمح بتقديم نافذة لعبة ملء الشاشة على الشاشة الخارجية بدلاً من عكس كل شيء على الشاشة.";
 "preference.title.silence_other_audio" = "إيقاف الصوت عند فتح اللعبة";
-"preference.detail.silence_other_audio" = "تمكين السماح لـ Amethyst بإيقاف الصوت من تطبيقات أخرى، مثل الموسيقى، عند بدء اللعبة.";
+"preference.detail.silence_other_audio" = "تمكين السماح لـ Hynis بإيقاف الصوت من تطبيقات أخرى، مثل الموسيقى، عند بدء اللعبة.";
 "preference.title.silence_with_switch" = "تعطيل الصوت باستخدام التبديل الصامت";
 "preference.detail.silence_with_switch" = "تمكين تعطيل الصوت عندما يكون الوضع الصامت قيد التشغيل. سماعات الرأس والسماعات الخارجية غير متأثرة.";
 "preference.title.default_gamepad_ctrl" = "تكوين لوحة التحكم";

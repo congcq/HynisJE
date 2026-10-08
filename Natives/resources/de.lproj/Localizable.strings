@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Diese Steuerungsversion (Code %d) ist in dieser Launcher-Version nicht implementiert.";
 "custom_controls.hint" = "Drücke irgendwo auf dem Bildschirm für weitere Optionen";
 
-"init.migrateDir" = "Das Amethyst-Datenverzeichnis ist jetzt %@. Alle vorhandenen Daten wurden an den neuen Standort verschoben.";
+"init.migrateDir" = "Das Hynis-Datenverzeichnis ist jetzt %@. Alle vorhandenen Daten wurden an den neuen Standort verschoben.";
 
 "launcher.mcl.downloading_file" = "%@ wird heruntergeladen";
 "launcher.mcl.error_download" = "Fehler beim Herunterladen von %@: %@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = ".jar installieren";
 
 "launcher.wait_jit.title" = "Wartet auf JIT";
-"launcher.wait_jit.message" = "Amethyst setzt auf Java's Just-in-time-Kompilierung, um mit maximaler Leistung zu arbeiten.";
+"launcher.wait_jit.message" = "Hynis setzt auf Java's Just-in-time-Kompilierung, um mit maximaler Leistung zu arbeiten.";
 
 "login.error.username.outOfRange" = "Benutzername muss mindestens 3 und maximal 16 Zeichen lang sein";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "Microsoft-Konto";
 "login.option.local" = "Lokales Konto";
 
-"login.warn.title.legacy_device" = "Die nächste Version von Amethyst wird mit diesem Gerät nicht mehr kompatibel sein.";
+"login.warn.title.legacy_device" = "Die nächste Version von Hynis wird mit diesem Gerät nicht mehr kompatibel sein.";
 "login.warn.message.legacy_device" = "Für das nächste große Update wird ein iOS-14-kompatibles Gerät benötigt.";
-"login.warn.title.legacy_ios" = "Die nächste Version von Amethyst wird ein Systemupdate erfordern.";
+"login.warn.title.legacy_ios" = "Die nächste Version von Hynis wird ein Systemupdate erfordern.";
 "login.warn.message.legacy_ios" = "Um das nächste große Update starten zu können muss dieses Gerät iOS 14 oder neuer installiert haben.";
 "login.warn.title.limited_ram" = "Dieses Gerät hat eine begrenzte Menge an Arbeitsspeicher zur Verfügung.";
 "login.warn.message.limited_ram" = "Wir empfehlen, dass der Auto RAM Mode aktiviert bleibt, um Instabilität und Performance-Probleme zu vermeiden.";
@@ -117,7 +117,7 @@
 
 "preference.section.general" = "Allgemeine Einstellungen";
 "preference.section.video" = "Grafik-Einstellungen";
-"preference.section.footer.video" = "Der automatische Renderer erlaubt Amethyst die besten Optionen basierend auf  
+"preference.section.footer.video" = "Der automatische Renderer erlaubt Hynis die besten Optionen basierend auf  
 der Minecraft-Version zu wählen. Verringerte Auflösung reduziert die Arbeitslast der GPU für eine bessere Leistung.";
 "preference.section.control" = "Steuerung anpassen";
 "preference.section.debug" = "UI-Debugging-Einstellungen";
@@ -141,11 +141,11 @@ der Minecraft-Version zu wählen. Verringerte Auflösung reduziert die Arbeitsla
 "preference.title.jitstreamer_server" = "JitStreamer-Server-IP";
 "preference.detail.jitstreamer_server" = "Erlaubt es dir, auf eine benutzerdefinierte JitStreamer-Server-IP zu wechseln, wie zum Beispiel für selbst gehostete Instanzen. Diese Option kann ausgelassen werden, wenn du die Standard-JitStreamer-Server verwendest.";
 "preference.title.enable_altkit" = "AltKit-Integration aktivieren";
-"preference.detail.enable_altkit" = "Wenn aktiviert, versucht Amethyst sich mit lokalen AltServern zu verbinden, um JIT zu aktivieren.";
+"preference.detail.enable_altkit" = "Wenn aktiviert, versucht Hynis sich mit lokalen AltServern zu verbinden, um JIT zu aktivieren.";
 "preference.title.appicon" = "App-Icon festlegen";
-"preference.detail.appicon" = "Erlaubt es dir, zwischen verschiedenen Startbildschirm-Icons für Amethyst zu wählen.";
-"preference.title.appicon-default" = "Bekanntes Amethyst-Icon (Hell)";
-"preference.title.appicon-dark" = "Bekanntes Amethyst-Icon (Dunkel)";
+"preference.detail.appicon" = "Erlaubt es dir, zwischen verschiedenen Startbildschirm-Icons für Hynis zu wählen.";
+"preference.title.appicon-default" = "Bekanntes Hynis-Icon (Hell)";
+"preference.title.appicon-dark" = "Bekanntes Hynis-Icon (Dunkel)";
 "preference.title.appicon-development" = "Gelenkte Entwicklung";
 "preference.title.hidden_sidebar" = "Hauptmenü-Sidebar standardmäßig ausblenden";
 "preference.detail.hidden_sidebar" = "Ermöglicht es dir, die Sidebar im Hauptmenü standardmäßig und beim Drehen auf iOS 14+ auszublenden.";
@@ -183,7 +183,7 @@ der Minecraft-Version zu wählen. Verringerte Auflösung reduziert die Arbeitsla
 "preference.title.fullscreen_airplay" = "Vollbild-AirPlay";
 "preference.detail.fullscreen_airplay" = "Ermöglicht es dir nur das Spielfenster auf ein externes Display zu spiegeln, anstatt den ganzen Bildschirm zu spiegeln.";
 "preference.title.silence_other_audio" = "Audio anhalten, wenn das Spiel geöffnet wird";
-"preference.detail.silence_other_audio" = "Aktiviere diese Option um Amethyst zu erlauben, Audio von anderen Apps wie Musik zu pausieren, wenn das Spiel gestartet wird.";
+"preference.detail.silence_other_audio" = "Aktiviere diese Option um Hynis zu erlauben, Audio von anderen Apps wie Musik zu pausieren, wenn das Spiel gestartet wird.";
 "preference.title.silence_with_switch" = "Audio mit Lautlos-Schalter deaktivieren";
 "preference.detail.silence_with_switch" = "Aktivieren, um Audio zu deaktivieren, wenn der Lautlos-Modus aktiviert ist. Kopfhörer und externe Lautsprecher sind nicht betroffen.";
 "preference.title.default_gamepad_ctrl" = "Steuerungs-Konfiguration";

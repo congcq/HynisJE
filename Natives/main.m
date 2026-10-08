@@ -103,8 +103,8 @@ bool init_checkForJailbreak() {
 }
 
 void init_logDeviceAndVer(char *argument) {
-    // Amethyst version
-    NSLog(@"[Pre-Init] Amethyst INIT!");
+    // Hynis version
+    NSLog(@"[Pre-Init] Hynis INIT!");
     NSLog(@"[Pre-Init] Version: %@-%s", NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"], CONFIG_TYPE);
     NSLog(@"[Pre-Init] Commit: %s (%s)", CONFIG_COMMIT, CONFIG_BRANCH);
     
@@ -117,7 +117,7 @@ void init_logDeviceAndVer(char *argument) {
     } else {
         type = "Unjailbroken";
     }
-    setenv("POJAV_DETECTEDINST", type, 1);
+    setenv("HYNIS_DETECTEDINST", type, 1);
     
     NSLog(@"[Pre-Init] Device: %@", [HostManager GetModelName]);
     NSLog(@"[Pre-Init] %@ (%s)", UIDevice.currentDevice.completeOSVersion, type);
@@ -137,7 +137,7 @@ void init_redirectStdio() {
 
     NSLog(@"[Pre-init] Starting logging STDIO to latestlog.txt\n");
 
-    NSString *home = @(getenv("POJAV_HOME"));
+    NSString *home = @(getenv("HYNIS_HOME"));
     NSString *currName = [home stringByAppendingPathComponent:@"latestlog.txt"];
     NSString *oldName = [home stringByAppendingPathComponent:@"latestlog.old.txt"];
     [fm removeItemAtPath:oldName error:nil];
@@ -194,12 +194,12 @@ void init_redirectStdio() {
 }
 
 void init_setupAccounts() {
-    NSString *controlPath = [@(getenv("POJAV_HOME")) stringByAppendingPathComponent:@"accounts"];
+    NSString *controlPath = [@(getenv("HYNIS_HOME")) stringByAppendingPathComponent:@"accounts"];
     [fm createDirectoryAtPath:controlPath withIntermediateDirectories:NO attributes:nil error:nil];
 }
 
 void init_setupCustomControls() {
-    NSString *controlPath = [@(getenv("POJAV_HOME")) stringByAppendingPathComponent:@"controlmap"];
+    NSString *controlPath = [@(getenv("HYNIS_HOME")) stringByAppendingPathComponent:@"controlmap"];
     [fm createDirectoryAtPath:controlPath withIntermediateDirectories:NO attributes:nil error:nil];
     generateAndSaveDefaultControl();
     NSString *gamepadControlPath = [controlPath stringByAppendingPathComponent:@"gamepads"];
@@ -217,7 +217,7 @@ void init_setupMultiDir() {
         NSLog(@"[Pre-init] Restored game directory preference (%@)\n", multidir);
     }
 
-    const char *home = getenv("POJAV_HOME");
+    const char *home = getenv("HYNIS_HOME");
     NSString *lasmPath = [NSString stringWithFormat:@"%s/Library/Application Support/minecraft", home];
     NSString *multidirPath = [NSString stringWithFormat:@"%s/instances/%@", home, multidir];
 
@@ -234,12 +234,12 @@ void init_setupMultiDir() {
     [fm removeItemAtPath:lasmPath error:nil];
     [fm createSymbolicLinkAtPath:lasmPath withDestinationPath:multidirPath error:nil];
     [fm changeCurrentDirectoryPath:lasmPath];
-    setenv("POJAV_GAME_DIR", lasmPath.UTF8String, 1);
+    setenv("HYNIS_GAME_DIR", lasmPath.UTF8String, 1);
 }
 
 void init_setupResolvConf() {
     // Write known DNS servers to the config
-    NSString *path = [NSString stringWithFormat:@"%s/resolv.conf", getenv("POJAV_HOME")];
+    NSString *path = [NSString stringWithFormat:@"%s/resolv.conf", getenv("HYNIS_HOME")];
     if (![fm fileExistsAtPath:path]) {
         [@"nameserver 8.8.8.8\n"
          @"nameserver 8.8.4.4"
@@ -255,7 +255,7 @@ void init_setupHomeDirectory() {
     
     BOOL isNotSandboxed = [@(getenv("HOME")).lastPathComponent isEqualToString:NSUserName()];
     homeDir = [NSString stringWithFormat:@"%s/Documents%@", getenv("HOME"),
-        isNotSandboxed ? @"/AngelAuraAmethyst":@""];
+        isNotSandboxed ? @"/Hynis":@""];
 
     if (![fm fileExistsAtPath:homeDir] ) {
         [fm createDirectoryAtPath:homeDir withIntermediateDirectories:NO attributes:nil error:&homeError];
@@ -268,7 +268,7 @@ void init_setupHomeDirectory() {
         [fm createDirectoryAtPath:homeDir withIntermediateDirectories:YES attributes:nil error:&homeError];
     }
     
-    setenv("POJAV_HOME", realpath(homeDir.UTF8String, NULL), 1);
+    setenv("HYNIS_HOME", realpath(homeDir.UTF8String, NULL), 1);
 }
 
 int main(int argc, char *argv[]) {
@@ -312,7 +312,7 @@ int main(int argc, char *argv[]) {
     init_setupAccounts();
     init_setupCustomControls();
 
-    // If sandbox is disabled, W^X JIT can be enabled by Amethyst itself
+    // If sandbox is disabled, W^X JIT can be enabled by Hynis itself
     if (!isJITEnabled(true) && getEntitlementValue(@"com.apple.private.security.no-sandbox")) {
         NSLog(@"[Pre-init] no-sandbox: YES, trying to enable JIT");
         int pid;

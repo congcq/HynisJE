@@ -173,7 +173,7 @@ int hooked_open(const char *path, int oflag, ...) {
     mode_t mode = va_arg(args, int);
     va_end(args);
     if (path && !strcmp(path, "/etc/resolv.conf")) {
-        return orig_open([NSString stringWithFormat:@"%s/resolv.conf", getenv("POJAV_HOME")].UTF8String, oflag, mode);
+        return orig_open([NSString stringWithFormat:@"%s/resolv.conf", getenv("HYNIS_HOME")].UTF8String, oflag, mode);
     }
 
     return orig_open(path, oflag, mode);

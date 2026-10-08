@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Tato verze ovládání (kód %d) v tomto sestavení spouštěče není implementována.";
 "custom_controls.hint" = "Pro více možností dlouze podržte kdekoli na obrazovce";
 
-"init.migrateDir" = "Složka dat Amethystu je nyní %@. Všechna vaše data byla přesunuta do nového umístění.";
+"init.migrateDir" = "Složka dat Hynisu je nyní %@. Všechna vaše data byla přesunuta do nového umístění.";
 
 "launcher.mcl.downloading_file" = "Stahování %@";
 "launcher.mcl.error_download" = "Nepodařilo se stáhnout %@: %@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "Instalovat .jar";
 
 "launcher.wait_jit.title" = "Čekám na JIT";
-"launcher.wait_jit.message" = "Amethyst potřebuje kompilaci Just-in-time, aby Java mohla fungovat maximální rychlostí.";
+"launcher.wait_jit.message" = "Hynis potřebuje kompilaci Just-in-time, aby Java mohla fungovat maximální rychlostí.";
 
 "login.error.username.outOfRange" = "Uživatelské jméno musí být dlouhé alespoň 3 znaky a nanejvýše 16 znaků";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "Účet Microsoft";
 "login.option.local" = "Místní účet";
 
-"login.warn.title.legacy_device" = "Příští vydání Amethystu nebude kompatibilní s tímto zařízením.";
+"login.warn.title.legacy_device" = "Příští vydání Hynisu nebude kompatibilní s tímto zařízením.";
 "login.warn.message.legacy_device" = "Ke spuštění příštího velkého vydání je potřeba zařízení schopného spustit iOS 14.";
-"login.warn.title.legacy_ios" = "Příští vydání Amethystu bude vyžadovat aktualizaci systému.";
+"login.warn.title.legacy_ios" = "Příští vydání Hynisu bude vyžadovat aktualizaci systému.";
 "login.warn.message.legacy_ios" = "Ke spuštění příštího velkého vydání, toto zařízení musí mít spuštěn iOS 14 či novější.";
 "login.warn.title.limited_ram" = "Toto zařízení má dostupné omezené množství paměti.";
 "login.warn.message.limited_ram" = "Doporučujeme ponechat automatickou RAM zapnutu, aby se zabránilo nestabilitě a problémům s výkonem.";
@@ -117,7 +117,7 @@
 
 "preference.section.general" = "Obecné Nastavení";
 "preference.section.video" = "Nastavení obrazu";
-"preference.section.footer.video" = "Automatický vykreslovač umožní Amethystu vybrat nejlepší možnost na základě verze Minecraftu. Snižením rozlišení snížíte zatížení GPU pro lepší výkon.";
+"preference.section.footer.video" = "Automatický vykreslovač umožní Hynisu vybrat nejlepší možnost na základě verze Minecraftu. Snižením rozlišení snížíte zatížení GPU pro lepší výkon.";
 "preference.section.control" = "Přizpůsobení ovládání";
 "preference.section.debug" = "Nastavení ladění UI";
 "preference.section.footer.debug" = "Kromě ladění mohou být tato nastavení užitečná pro vlastní ovládání. Možná budete muset restartovat spouštěč aby se změny projevily.";
@@ -140,11 +140,11 @@
 "preference.title.jitstreamer_server" = "IP adresa serveru JitStreameru";
 "preference.detail.jitstreamer_server" = "Umožňuje zadat vlastní IP adresu JitStreameru, například pro samohostěné instance. Tato možnost může být nechána nezměněná používáte-li výchozí servery JitStreameru.";
 "preference.title.enable_altkit" = "Povolit integraci AltKitu";
-"preference.detail.enable_altkit" = "Pokud povoleno, Amethyst se pokusí o připojení k místním AltServerům pro zapnutí JIT.";
+"preference.detail.enable_altkit" = "Pokud povoleno, Hynis se pokusí o připojení k místním AltServerům pro zapnutí JIT.";
 "preference.title.appicon" = "Nastaviti ikonu aplikace";
-"preference.detail.appicon" = "Umožnǔje vybrat mezi různými ikonami plochy Amethystu.";
-"preference.title.appicon-default" = "Známá Amethyst světlá";
-"preference.title.appicon-dark" = "Známá Amethyst tmavá";
+"preference.detail.appicon" = "Umožnǔje vybrat mezi různými ikonami plochy Hynisu.";
+"preference.title.appicon-default" = "Známá Hynis světlá";
+"preference.title.appicon-dark" = "Známá Hynis tmavá";
 "preference.title.appicon-development" = "Načrtnutý vývoj";
 "preference.title.hidden_sidebar" = "Skrývat hlavní postranní menu ze začátku";
 "preference.detail.hidden_sidebar" = "Umožňuje skrývat hlavní postranní panel ve hlavním menu ve výchozím nastavení při otáčení v iOSe 14 a novějších.";
@@ -182,7 +182,7 @@
 "preference.title.fullscreen_airplay" = "AirPlay celé obrazovky";
 "preference.detail.fullscreen_airplay" = "Umožňuje zobrazovat okno hry na celé obrazovce na externím displeji bez zrcadlení všeho na obrazovce.";
 "preference.title.silence_other_audio" = "Pozastavit zvuk při otevření hry";
-"preference.detail.silence_other_audio" = "Zapněte pro umožnění Amethystu pozastavit zvuk z jiných aplikací, například Hudbu při spouštění hry.";
+"preference.detail.silence_other_audio" = "Zapněte pro umožnění Hynisu pozastavit zvuk z jiných aplikací, například Hudbu při spouštění hry.";
 "preference.title.silence_with_switch" = "Vypnout zvuk tichým přepínačem";
 "preference.detail.silence_with_switch" = "Povolte pro vypnutí zvuku při Tichém režimu. Sluchátka a externí reproduktory nejsou ovlivněny.";
 "preference.title.default_gamepad_ctrl" = "Nastavení ovladače";

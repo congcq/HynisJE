@@ -58,13 +58,13 @@
 "custom_controls.error.incompatible" = "此控制版本（號碼 %d）在這個啟動器構建中沒有實現。";
 "custom_controls.hint" = "長按螢幕上的任何位置以顯示更多選項";
 
-"init.migrateDir" = "Amethyst數據資料夾現為%@。你的所有已有資料已被移動到新位置。";
+"init.migrateDir" = "Hynis數據資料夾現為%@。你的所有已有資料已被移動到新位置。";
 
 "launcher.menu.custom_controls" = "自訂控制鍵";
 "launcher.menu.install_jar" = "安裝 .jar";
 
 "launcher.wait_jit.title" = "正在等待JIT";
-"launcher.wait_jit.message" = "Amethyst依賴即時編譯令Java以最大性能執行。";
+"launcher.wait_jit.message" = "Hynis依賴即時編譯令Java以最大性能執行。";
 
 "login.error.username.outOfRange" = "用戶名必須是在3至16個字元之間。";
 
@@ -124,9 +124,9 @@
 "preference.title.jitstreamer_server" = "JitStreamer伺服器地址";
 "preference.detail.jitstreamer_server" = "這個選項允許你設定一個自定義JitStreamer IP地址，例如一個自托管的伺服器。如果你使用預設的JitStreamer伺服器，你可以忽略這個選項。";
 "preference.title.appicon" = "設定應用程式圖示";
-"preference.detail.appicon" = "讓你能選擇Amethyst在主畫面上的圖示。";
-"preference.title.appicon-default" = "熟悉的明亮Amethyst";
-"preference.title.appicon-dark" = "熟悉的暗黑Amethyst";
+"preference.detail.appicon" = "讓你能選擇Hynis在主畫面上的圖示。";
+"preference.title.appicon-default" = "熟悉的明亮Hynis";
+"preference.title.appicon-dark" = "熟悉的暗黑Hynis";
 "preference.title.hidden_sidebar" = "預設隱藏主選單的側邊欄";
 
 "preference.title.reset_warnings" = "重設所有警告";

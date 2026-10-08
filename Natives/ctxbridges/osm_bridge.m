@@ -12,7 +12,7 @@
 static osmesa_library handle;
 
 void dlsym_OSMesa() {
-    void* dl_handle = dlopen([NSString stringWithFormat:@"@rpath/%s", getenv("POJAV_RENDERER")].UTF8String, RTLD_GLOBAL);
+    void* dl_handle = dlopen([NSString stringWithFormat:@"@rpath/%s", getenv("HYNIS_RENDERER")].UTF8String, RTLD_GLOBAL);
     NSCAssert(dl_handle, @(dlerror()));
     handle.OSMesaMakeCurrent = dlsym(dl_handle,"OSMesaMakeCurrent");
     handle.OSMesaGetCurrentContext = dlsym(dl_handle,"OSMesaGetCurrentContext");

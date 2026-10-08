@@ -54,7 +54,7 @@ BOOL PLPatchMachOPlatformForFile(const char *path) {
         struct fat_arch *arch = (struct fat_arch *)(map + sizeof(struct fat_header));
         for (int i = 0; i < OSSwapInt32(header->nfat_arch); i++) {
             if (OSSwapInt32(arch->cputype) == CPU_TYPE_ARM64) {
-                NSLog(@"[Amethyst] Patching %s", path);
+                NSLog(@"[Hynis] Patching %s", path);
                 patched |= PLPatchMachOPlatformForSlice(path, (struct mach_header_64 *)(map + OSSwapInt32(arch->offset)));
             }
             arch = (struct fat_arch *)((void *)arch + sizeof(struct fat_arch));

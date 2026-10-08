@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "此控件版本（代码 %d）在当前启动器版本中尚未实现。";
 "custom_controls.hint" = "长按屏幕上的任意位置以获取更多选项";
 
-"init.migrateDir" = "目前 Amethyst 数据目录为%@。所有的游戏资源已移动到最新目录。";
+"init.migrateDir" = "目前 Hynis 数据目录为%@。所有的游戏资源已移动到最新目录。";
 
 "launcher.mcl.downloading_file" = "正在下载 %@";
 "launcher.mcl.error_download" = "下载 %@ 失败：%@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "安装 .jar";
 
 "launcher.wait_jit.title" = "请等待应用获取到JIT(Just-in-time)";
-"launcher.wait_jit.message" = "Amethyst启动器必须要JIT (Just-in-time) 权限才能启动游戏";
+"launcher.wait_jit.message" = "Hynis启动器必须要JIT (Just-in-time) 权限才能启动游戏";
 
 "login.error.username.outOfRange" = "用户名必须在 3-16 个字符以内";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "微软账户";
 "login.option.local" = "本地账户";
 
-"login.warn.title.legacy_device" = "Amethyst 的下一个版本将与此设备不兼容。";
+"login.warn.title.legacy_device" = "Hynis 的下一个版本将与此设备不兼容。";
 "login.warn.message.legacy_device" = "运行下一个主要版本，需要一台能够运行 iOS 14 的设备。";
-"login.warn.title.legacy_ios" = "Amethyst 的下一个版本将需要系统更新。";
+"login.warn.title.legacy_ios" = "Hynis 的下一个版本将需要系统更新。";
 "login.warn.message.legacy_ios" = "运行下一个主要版本，需要一台能够运行 iOS 14 或更高版本的设备。";
 "login.warn.title.limited_ram" = "该设备的可用内存有限。";
 "login.warn.message.limited_ram" = "我们建议启用自动分配内存大小，以防止不稳定和性能问题。";
@@ -117,7 +117,7 @@
 
 "preference.section.general" = "启动器基础设置";
 "preference.section.video" = "视频设置";
-"preference.section.footer.video" = "自动渲染器允许 Amethyst 选择基于 Minecraft 版本的最佳选项。减少分辨率降低GPU 工作量以提高性能。";
+"preference.section.footer.video" = "自动渲染器允许 Hynis 选择基于 Minecraft 版本的最佳选项。减少分辨率降低GPU 工作量以提高性能。";
 "preference.section.control" = "自定义控制键";
 "preference.section.debug" = "UI设置";
 "preference.section.footer.debug" = "除了调试外，这些设置可能对自定义控件有用。您可能需要重新启动启动器才能使更改生效。";
@@ -140,11 +140,11 @@
 "preference.title.jitstreamer_server" = "JitStreamer的服务器地址";
 "preference.detail.jitstreamer_server" = "该选项将自定义获取 JIT 权限地址的 JitStreamer 服务器，若你不知道如何修改请勿修改，当然也可以保持默认地址";
 "preference.title.enable_altkit" = "启用 AltKit 集成";
-"preference.detail.enable_altkit" = "启用时，Amethyst 将尝试连接到本地 AltServers 以启用 JIT。";
+"preference.detail.enable_altkit" = "启用时，Hynis 将尝试连接到本地 AltServers 以启用 JIT。";
 "preference.title.appicon" = "设置应用应用图标风格";
-"preference.detail.appicon" = "允许您为 Amethyst 选择不同的主屏幕图标。";
-"preference.title.appicon-default" = "设置 Amethyst 图标为浅色";
-"preference.title.appicon-dark" = "设置 Amethyst 图标为深色";
+"preference.detail.appicon" = "允许您为 Hynis 选择不同的主屏幕图标。";
+"preference.title.appicon-default" = "设置 Hynis 图标为浅色";
+"preference.title.appicon-dark" = "设置 Hynis 图标为深色";
 "preference.title.appicon-development" = "已封装开发";
 "preference.title.hidden_sidebar" = "默认隐藏主菜单侧边栏";
 "preference.detail.hidden_sidebar" = "允许您在 iOS 14 及更高版本中默认或旋转中隐藏主菜单上的侧边栏。";
@@ -182,7 +182,7 @@
 "preference.title.fullscreen_airplay" = "全屏 AirPlay";
 "preference.detail.fullscreen_airplay" = "允许在外部显示器上全屏显示游戏，而不是直接镜像显示。";
 "preference.title.silence_other_audio" = "游戏打开时暂停音频";
-"preference.detail.silence_other_audio" = "启用后将允许 Amethyst 在启动游戏时暂停其他应用的音频。";
+"preference.detail.silence_other_audio" = "启用后将允许 Hynis 在启动游戏时暂停其他应用的音频。";
 "preference.title.silence_with_switch" = "使用静音开关禁用音频";
 "preference.detail.silence_with_switch" = "启用时，可以使用静音模式禁用音频，耳机和外部扬声器不受此影响。";
 "preference.title.default_gamepad_ctrl" = "手柄配置";

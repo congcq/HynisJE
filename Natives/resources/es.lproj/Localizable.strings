@@ -55,13 +55,13 @@
 "custom_controls.control_menu.add_drawer" = "Añadir Cajón";
 "custom_controls.hint" = "Mantenga pulsado en cualquier lugar de la pantalla para más opciones";
 
-"init.migrateDir" = "La carpeta de Amethyst ahora está en %@. Todos tus datos han sido movidos a esa nueva ubicación.";
+"init.migrateDir" = "La carpeta de Hynis ahora está en %@. Todos tus datos han sido movidos a esa nueva ubicación.";
 
 "launcher.menu.custom_controls" = "Controles personalizados";
 "launcher.menu.install_jar" = "Instalar .jar";
 
 "launcher.wait_jit.title" = "Esperando por JIT";
-"launcher.wait_jit.message" = "Amethyst utiliza la compilación Just-in-time para que Java funcione con el máximo rendimiento.";
+"launcher.wait_jit.message" = "Hynis utiliza la compilación Just-in-time para que Java funcione con el máximo rendimiento.";
 
 "login.error.username.outOfRange" = "El nombre de usuario debe tener al menos 3 caracteres y un máximo de 16 caracteres";
 
@@ -116,9 +116,9 @@
 "preference.detail.debug_logging" = "Registra las configuraciones y acciones internas en latestlog.txt. Esto ayuda a los desarrolladores a encontrar problemas más fácilmente, pero es posible que el juego sea más lento, ya que los registros serán escritos con más frecuencia.";
 "preference.title.jitstreamer_server" = "IP del servidor JitStreamer";
 "preference.title.appicon" = "Establecer icono del app";
-"preference.detail.appicon" = "Le permite elegir entre diferentes iconos de Amethyst para tu pantalla de inicio.";
-"preference.title.appicon-default" = "Amethyst clásico claro";
-"preference.title.appicon-dark" = "Amethyst clásico oscuro";
+"preference.detail.appicon" = "Le permite elegir entre diferentes iconos de Hynis para tu pantalla de inicio.";
+"preference.title.appicon-default" = "Hynis clásico claro";
+"preference.title.appicon-dark" = "Hynis clásico oscuro";
 
 "preference.title.reset_warnings" = "Reiniciar todas las advertencias";
 "preference.title.done.reset_warnings" = "Todas las advertencias han sido reiniciadas.";

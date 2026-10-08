@@ -75,7 +75,7 @@ IOS         := 0
 BOOTJDK     ?= /usr/bin
 $(warning Building on Linux. Note that all targets may not compile or require external components.)
 else
-$(error This platform is not currently supported for building Angel Aura Amethyst.)
+$(error This platform is not currently supported for building Hynis.)
 endif
 
 # Define PLATFORM_NAME from PLATFORM
@@ -104,11 +104,11 @@ else
 $(error PLATFORM is not valid.)
 endif
 
-POJAV_BUNDLE_DIR      ?= $(OUTPUTDIR)/AngelAuraAmethyst.app
-POJAV_JRE8_DIR        ?= $(SOURCEDIR)/depends/java-8-openjdk
-POJAV_JRE17_DIR       ?= $(SOURCEDIR)/depends/java-17-openjdk
-POJAV_JRE21_DIR       ?= $(SOURCEDIR)/depends/java-21-openjdk
-POJAV_JRE25_DIR       ?= $(SOURCEDIR)/depends/java-25-openjdk
+HYNIS_BUNDLE_DIR      ?= $(OUTPUTDIR)/Hynis.app
+HYNIS_JRE8_DIR        ?= $(SOURCEDIR)/depends/java-8-openjdk
+HYNIS_JRE17_DIR       ?= $(SOURCEDIR)/depends/java-17-openjdk
+HYNIS_JRE21_DIR       ?= $(SOURCEDIR)/depends/java-21-openjdk
+HYNIS_JRE25_DIR       ?= $(SOURCEDIR)/depends/java-25-openjdk
 
 # Function to use later for checking dependencies
 METHOD_DEPCHECK   = $(shell $(1) >/dev/null 2>&1 && echo 1)
@@ -149,10 +149,10 @@ METHOD_PACKAGE = \
 		IPA_SUFFIX=".ipa"; \
 	fi; \
 	if [ '$(SLIMMED_ONLY)' = '0' ]; then \
-		zip --symlinks -r $(OUTPUTDIR)/org.angelauramc.amethyst-$(VERSION)-$(PLATFORM_NAME)$$IPA_SUFFIX Payload; \
+		zip --symlinks -r $(OUTPUTDIR)/io.github.congcq.hynis-$(VERSION)-$(PLATFORM_NAME)$$IPA_SUFFIX Payload; \
 	fi; \
 	if [ '$(SLIMMED)' = '1' ] || [ '$(SLIMMED_ONLY)' = '1' ]; then \
-		zip --symlinks -r $(OUTPUTDIR)/org.angelauramc.amethyst.slimmed-$(VERSION)-$(PLATFORM_NAME)$$IPA_SUFFIX Payload --exclude='Payload/AngelAuraAmethyst.app/java_runtimes/*'; \
+		zip --symlinks -r $(OUTPUTDIR)/io.github.congcq.hynis.slimmed-$(VERSION)-$(PLATFORM_NAME)$$IPA_SUFFIX Payload --exclude='Payload/Hynis.app/java_runtimes/*'; \
 	fi
 
 # Function to download and unpack Java runtimes.
@@ -232,7 +232,7 @@ endif
 all: clean native java jre assets payload package dsym
 
 help:
-	echo 'Makefile to compile Angel Aura Amethyst'
+	echo 'Makefile to compile Hynis'
 	echo ''
 	echo 'Usage:'
 	echo '    make                                Makes everything under all'
@@ -242,8 +242,8 @@ help:
 	echo '    make java                           Builds the Java app'
 	echo '    make jre                            Downloads/unpacks the iOS JREs'
 	echo '    make assets                         Compiles Assets.xcassets'
-	echo '    make payload                        Makes Payload/AngelAuraAmethyst.app'
-	echo '    make package                        Builds ipa of Angel Aura Amethyst'
+	echo '    make payload                        Makes Payload/Hynis.app'
+	echo '    make package                        Builds ipa of Hynis'
 	echo '    make deploy                         Copies files to local iDevice'
 	echo '    make dsym                           Generate debug symbol files'
 	echo '    make clean                          Cleans build directories'
@@ -257,7 +257,7 @@ check:
 	)
 
 native: dep_mg
-	echo '[Amethyst v$(VERSION)] native - start'
+	echo '[Hynis v$(VERSION)] native - start'
 	mkdir -p $(WORKINGDIR)
 	cd $(WORKINGDIR) && cmake \
 		-DCMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE) \
@@ -274,17 +274,17 @@ native: dep_mg
 		..
 
 	cmake --build $(WORKINGDIR) --config $(CMAKE_BUILD_TYPE) -j$(JOBS)
-	#	--target awt_headless awt_xawt libOSMesaOverride.dylib tinygl4angle AngelAuraAmethyst
+	#	--target awt_headless awt_xawt libOSMesaOverride.dylib tinygl4angle Hynis
 	rm $(WORKINGDIR)/libawt_headless.dylib
-	echo '[Amethyst v$(VERSION)] native - end'
+	echo '[Hynis v$(VERSION)] native - end'
 
 java:
-	echo '[Amethyst v$(VERSION)] java - start'
+	echo '[Hynis v$(VERSION)] java - start'
 	$(MAKE) -C JavaApp -j$(JOBS) BOOTJDK=$(BOOTJDK)
-	echo '[Amethyst v$(VERSION)] java - end'
+	echo '[Hynis v$(VERSION)] java - end'
 
 jre: native
-	echo '[Amethyst v$(VERSION)] jre - start'
+	echo '[Hynis v$(VERSION)] jre - start'
 	mkdir -p $(SOURCEDIR)/depends
 	cd $(SOURCEDIR)/depends; \
 	$(call METHOD_JAVA_UNPACK,8,'https://assets.angelauramc.dev/openjdk/ios-arm64/jre8-ios-aarch64.zip'); \
@@ -295,18 +295,18 @@ jre: native
 	cd $(SOURCEDIR); \
 	rm -rf $(SOURCEDIR)/depends/java-*-openjdk/{ASSEMBLY_EXCEPTION,bin,include,jre,legal,LICENSE,man,THIRD_PARTY_README,lib/{ct.sym,jspawnhelper,libjsig.dylib,src.zip,tools.jar}}; \
 	$(call METHOD_DIRCHECK,$(OUTPUTDIR)/java_runtimes); \
-	cp -R $(POJAV_JRE8_DIR) $(OUTPUTDIR)/java_runtimes; \
-	cp -R $(POJAV_JRE17_DIR) $(OUTPUTDIR)/java_runtimes; \
-	cp -R $(POJAV_JRE21_DIR) $(OUTPUTDIR)/java_runtimes; \
-	cp -R $(POJAV_JRE25_DIR) $(OUTPUTDIR)/java_runtimes; \
+	cp -R $(HYNIS_JRE8_DIR) $(OUTPUTDIR)/java_runtimes; \
+	cp -R $(HYNIS_JRE17_DIR) $(OUTPUTDIR)/java_runtimes; \
+	cp -R $(HYNIS_JRE21_DIR) $(OUTPUTDIR)/java_runtimes; \
+	cp -R $(HYNIS_JRE25_DIR) $(OUTPUTDIR)/java_runtimes; \
 	cp $(WORKINGDIR)/libawt_xawt.dylib $(OUTPUTDIR)/java_runtimes/java-8-openjdk/lib; \
 	cp $(WORKINGDIR)/libawt_xawt.dylib $(OUTPUTDIR)/java_runtimes/java-17-openjdk/lib;
 	cp $(WORKINGDIR)/libawt_xawt.dylib $(OUTPUTDIR)/java_runtimes/java-21-openjdk/lib;
 	cp $(WORKINGDIR)/libawt_xawt.dylib $(OUTPUTDIR)/java_runtimes/java-25-openjdk/lib
-	echo '[Amethyst v$(VERSION)] jre - end'
+	echo '[Hynis v$(VERSION)] jre - end'
 
 dep_mg:
-	echo '[Amethyst v$(VERSION)] dep_mg - start'
+	echo '[Hynis v$(VERSION)] dep_mg - start'
 	mkdir -p $(WORKINGDIR)/mobileglues
 	cd $(WORKINGDIR)/mobileglues && cmake \
 		-DMACOS="1" \
@@ -322,12 +322,12 @@ dep_mg:
 	cmake --build $(WORKINGDIR)/mobileglues --config RelWithDebInfo -j$(JOBS) --target mobileglues
 	cp $(WORKINGDIR)/mobileglues/libmobileglues.dylib $(WORKINGDIR)/libmobileglues.dylib
 	cp $(SOURCEDIR)/Natives/external/MobileGlues/src/main/cpp/libraries/ios/libspirv-cross-c-shared.0.dylib $(WORKINGDIR)/libspirv-cross-c-shared.0.dylib
-	echo '[Amethyst v$(VERSION)] dep_mg - end'
+	echo '[Hynis v$(VERSION)] dep_mg - end'
 
 assets:
-	echo '[Amethyst v$(VERSION)] assets - start'
+	echo '[Hynis v$(VERSION)] assets - start'
 	if [ '$(IOS)' = '0' ] && [ '$(DETECTPLAT)' = 'Darwin' ]; then \
-		mkdir -p $(WORKINGDIR)/AngelAuraAmethyst.app/Base.lproj; \
+		mkdir -p $(WORKINGDIR)/Hynis.app/Base.lproj; \
 		xcrun actool $(SOURCEDIR)/Natives/Assets.xcassets \
 			--compile $(SOURCEDIR)/Natives/resources \
 			--platform iphoneos \
@@ -335,53 +335,53 @@ assets:
 			--app-icon AppIcon-Light \
 			--output-partial-info-plist /dev/null || exit 1; \
 	else \
-		echo 'Due to the required tools not being available, you cannot compile the extras for Angel Aura Amethyst with an iOS device.'; \
+		echo 'Due to the required tools not being available, you cannot compile the extras for Hynis with an iOS device.'; \
 	fi
-	echo '[Amethyst v$(VERSION)] assets - end'
+	echo '[Hynis v$(VERSION)] assets - end'
 
 payload: native dep_mg java jre assets
-	echo '[Amethyst v$(VERSION)] payload - start'
-	$(call METHOD_DIRCHECK,$(WORKINGDIR)/AngelAuraAmethyst.app/libs)
-	$(call METHOD_DIRCHECK,$(WORKINGDIR)/AngelAuraAmethyst.app/libs_caciocavallo)
-	$(call METHOD_DIRCHECK,$(WORKINGDIR)/AngelAuraAmethyst.app/libs_caciocavallo17)
-	cp -R $(SOURCEDIR)/Natives/resources/en.lproj/LaunchScreen.storyboardc $(WORKINGDIR)/AngelAuraAmethyst.app/Base.lproj/ || exit 1
-	cp -R $(SOURCEDIR)/Natives/resources/* $(WORKINGDIR)/AngelAuraAmethyst.app/ || exit 1
-	cp $(WORKINGDIR)/*.dylib $(WORKINGDIR)/AngelAuraAmethyst.app/Frameworks/ || exit 1
-	cp -R $(SOURCEDIR)/JavaApp/libs/others/* $(WORKINGDIR)/AngelAuraAmethyst.app/libs/ || exit 1
-	cp $(SOURCEDIR)/JavaApp/build/*.jar $(WORKINGDIR)/AngelAuraAmethyst.app/libs/ || exit 1
-	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo/* $(WORKINGDIR)/AngelAuraAmethyst.app/libs_caciocavallo || exit 1
-	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo17/* $(WORKINGDIR)/AngelAuraAmethyst.app/libs_caciocavallo17 || exit 1
+	echo '[Hynis v$(VERSION)] payload - start'
+	$(call METHOD_DIRCHECK,$(WORKINGDIR)/Hynis.app/libs)
+	$(call METHOD_DIRCHECK,$(WORKINGDIR)/Hynis.app/libs_caciocavallo)
+	$(call METHOD_DIRCHECK,$(WORKINGDIR)/Hynis.app/libs_caciocavallo17)
+	cp -R $(SOURCEDIR)/Natives/resources/en.lproj/LaunchScreen.storyboardc $(WORKINGDIR)/Hynis.app/Base.lproj/ || exit 1
+	cp -R $(SOURCEDIR)/Natives/resources/* $(WORKINGDIR)/Hynis.app/ || exit 1
+	cp $(WORKINGDIR)/*.dylib $(WORKINGDIR)/Hynis.app/Frameworks/ || exit 1
+	cp -R $(SOURCEDIR)/JavaApp/libs/others/* $(WORKINGDIR)/Hynis.app/libs/ || exit 1
+	cp $(SOURCEDIR)/JavaApp/build/*.jar $(WORKINGDIR)/Hynis.app/libs/ || exit 1
+	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo/* $(WORKINGDIR)/Hynis.app/libs_caciocavallo || exit 1
+	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo17/* $(WORKINGDIR)/Hynis.app/libs_caciocavallo17 || exit 1
 	$(call METHOD_DIRCHECK,$(OUTPUTDIR)/Payload)
-	cp -R $(WORKINGDIR)/AngelAuraAmethyst.app $(OUTPUTDIR)/Payload
+	cp -R $(WORKINGDIR)/Hynis.app $(OUTPUTDIR)/Payload
 	if [ '$(SLIMMED_ONLY)' != '1' ]; then \
-		cp -R $(OUTPUTDIR)/java_runtimes $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app; \
+		cp -R $(OUTPUTDIR)/java_runtimes $(OUTPUTDIR)/Payload/Hynis.app; \
 	fi
-	ldid -S $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app; \
+	ldid -S $(OUTPUTDIR)/Payload/Hynis.app; \
 	if [ '$(TROLLSTORE_JIT_ENT)' == '1' ]; then \
-		ldid -S$(SOURCEDIR)/entitlements.trollstore.xml $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/AngelAuraAmethyst; \
+		ldid -S$(SOURCEDIR)/entitlements.trollstore.xml $(OUTPUTDIR)/Payload/Hynis.app/Hynis; \
 	elif [ '$(PLATFORM)' == '6' ]; then \
-		ldid -S$(SOURCEDIR)/entitlements.codesign.xml $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/AngelAuraAmethyst; \
+		ldid -S$(SOURCEDIR)/entitlements.codesign.xml $(OUTPUTDIR)/Payload/Hynis.app/Hynis; \
 	else \
-		ldid -S$(SOURCEDIR)/entitlements.sideload.xml $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/AngelAuraAmethyst; \
+		ldid -S$(SOURCEDIR)/entitlements.sideload.xml $(OUTPUTDIR)/Payload/Hynis.app/Hynis; \
 	fi
 	chmod -R 755 $(OUTPUTDIR)/Payload
 	if [ '$(PLATFORM)' != '2' ]; then \
-		$(call METHOD_MACHO,$(OUTPUTDIR)/Payload/AngelAuraAmethyst.app,$(call METHOD_CHANGE_PLAT,$(PLATFORM),$$file)); \
+		$(call METHOD_MACHO,$(OUTPUTDIR)/Payload/Hynis.app,$(call METHOD_CHANGE_PLAT,$(PLATFORM),$$file)); \
 		$(call METHOD_MACHO,$(OUTPUTDIR)/java_runtimes,$(call METHOD_CHANGE_PLAT,$(PLATFORM),$$file)); \
 	fi
-	echo '[Amethyst v$(VERSION)] payload - end'
+	echo '[Hynis v$(VERSION)] payload - end'
 
 deploy:
-	echo '[Amethyst v$(VERSION)] deploy - start'
+	echo '[Hynis v$(VERSION)] deploy - start'
 	cd $(OUTPUTDIR); \
 	if [ '$(IOS)' = '1' ]; then \
-		ldid -S $(WORKINGDIR)/AngelAuraAmethyst.app || exit 1; \
-		ldid -S$(SOURCEDIR)/entitlements.trollstore.xml $(WORKINGDIR)/AngelAuraAmethyst.app/AngelAuraAmethyst || exit 1; \
-		sudo mv $(WORKINGDIR)/*.dylib $(PREFIX)Applications/AngelAuraAmethyst.app/Frameworks/ || exit 1; \
-		sudo mv $(WORKINGDIR)/AngelAuraAmethyst.app/AngelAuraAmethyst $(PREFIX)Applications/AngelAuraAmethyst.app/AngelAuraAmethyst || exit 1; \
-		sudo mv $(SOURCEDIR)/JavaApp/build/*.jar $(PREFIX)Applications/AngelAuraAmethyst.app/libs/ || exit 1; \
-		cd $(PREFIX)Applications/AngelAuraAmethyst.app/Frameworks || exit 1; \
-		sudo chown -R 501:501 $(PREFIX)Applications/AngelAuraAmethyst.app/* || exit 1; \
+		ldid -S $(WORKINGDIR)/Hynis.app || exit 1; \
+		ldid -S$(SOURCEDIR)/entitlements.trollstore.xml $(WORKINGDIR)/Hynis.app/Hynis || exit 1; \
+		sudo mv $(WORKINGDIR)/*.dylib $(PREFIX)Applications/Hynis.app/Frameworks/ || exit 1; \
+		sudo mv $(WORKINGDIR)/Hynis.app/Hynis $(PREFIX)Applications/Hynis.app/Hynis || exit 1; \
+		sudo mv $(SOURCEDIR)/JavaApp/build/*.jar $(PREFIX)Applications/Hynis.app/libs/ || exit 1; \
+		cd $(PREFIX)Applications/Hynis.app/Frameworks || exit 1; \
+		sudo chown -R 501:501 $(PREFIX)Applications/Hynis.app/* || exit 1; \
 	elif [ '$(IOS)' = '0' ] && [ '$(DETECTPLAT)' = 'Darwin' ]; then \
 		if [ '$(PLATFORM)' != '2' ] || [ '$(TEAMID)' = '-1' ] || [ '$(SIGNING_TEAMID)' = '-1' ] || [ '$(PROVISIONING)' = '-1' ]; then \
 			echo 'Configuration not supported for deploy recipe.'; \
@@ -396,12 +396,12 @@ deploy:
 	else \
 		echo 'Device not supported for deploy recipe.'; \
 	fi
-	echo '[Amethyst v$(VERSION)] deploy - end'
+	echo '[Hynis v$(VERSION)] deploy - end'
 
 package: payload
-	echo '[Amethyst v$(VERSION)] package - start'
+	echo '[Hynis v$(VERSION)] package - start'
 	if [ '$(TEAMID)' != '-1' ] && [ '$(SIGNING_TEAMID)' != '-1' ] && [ -f '$(PROVISIONING)' ] && [ '$(DETECTPLAT)' = 'Darwin' ]; then \
-		printf '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n	<key>application-identifier</key>\n	<string>$(TEAMID).org.angelauramc.amethyst</string>\n	<key>com.apple.developer.team-identifier</key>\n	<string>$(TEAMID)</string>\n	<key>get-task-allow</key>\n	<true/>\n	<key>keychain-access-groups</key>\n	<array>\n	<string>$(TEAMID).*</string>\n	<string>com.apple.token</string>\n	</array>\n</dict>\n</plist>' > entitlements.codesign.xml; \
+		printf '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n	<key>application-identifier</key>\n	<string>$(TEAMID).io.github.congcq.hynis</string>\n	<key>com.apple.developer.team-identifier</key>\n	<string>$(TEAMID)</string>\n	<key>get-task-allow</key>\n	<true/>\n	<key>keychain-access-groups</key>\n	<array>\n	<string>$(TEAMID).*</string>\n	<string>com.apple.token</string>\n	</array>\n</dict>\n</plist>' > entitlements.codesign.xml; \
 		$(MAKE) codesign; \
 		rm -rf entitlements.codesign.xml; \
 	else \
@@ -410,28 +410,28 @@ package: payload
 	cd $(OUTPUTDIR); \
 	$(call METHOD_PACKAGE); \
 	zip --symlinks -r $(OUTPUTDIR)/java_runtimes.zip java_runtimes; \
-	echo '[Amethyst v$(VERSION)] package - end'
+	echo '[Hynis v$(VERSION)] package - end'
 	
 dsym: payload
-	echo '[Amethyst v$(VERSION)] dsym - start'
-	dsymutil --arch arm64 $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/AngelAuraAmethyst; \
-	rm -rf $(OUTPUTDIR)/AngelAuraAmethyst.dSYM; \
-	mv $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/AngelAuraAmethyst.dSYM $(OUTPUTDIR)/AngelAuraAmethyst.dSYM
-	echo '[Amethyst v$(VERSION)] dsym - end'
+	echo '[Hynis v$(VERSION)] dsym - start'
+	dsymutil --arch arm64 $(OUTPUTDIR)/Payload/Hynis.app/Hynis; \
+	rm -rf $(OUTPUTDIR)/Hynis.dSYM; \
+	mv $(OUTPUTDIR)/Payload/Hynis.app/Hynis.dSYM $(OUTPUTDIR)/Hynis.dSYM
+	echo '[Hynis v$(VERSION)] dsym - end'
 	
 codesign:
-	echo '[Amethyst v$(VERSION)] codesign - start'
-	cp '$(PROVISIONING)' $(OUTPUTDIR)/Payload/AngelAuraAmethyst.app/embedded.mobileprovision
-	$(call METHOD_MACHO,$(OUTPUTDIR)/Payload/AngelAuraAmethyst.app,$(call METHOD_CODESIGN,$(SIGNING_TEAMID),$$file))
+	echo '[Hynis v$(VERSION)] codesign - start'
+	cp '$(PROVISIONING)' $(OUTPUTDIR)/Payload/Hynis.app/embedded.mobileprovision
+	$(call METHOD_MACHO,$(OUTPUTDIR)/Payload/Hynis.app,$(call METHOD_CODESIGN,$(SIGNING_TEAMID),$$file))
 	$(call METHOD_MACHO,$(OUTPUTDIR)/java_runtimes,$(call METHOD_CODESIGN,$(SIGNING_TEAMID),$$file))
-	echo '[Amethyst v$(VERSION)] codesign - end'
+	echo '[Hynis v$(VERSION)] codesign - end'
 
 clean:
-	echo '[Amethyst v$(VERSION)] clean - start'
+	echo '[Hynis v$(VERSION)] clean - start'
 	rm -rf $(WORKINGDIR)
 	rm -rf JavaApp/build
 	rm -rf $(OUTPUTDIR)
-	echo '[Amethyst v$(VERSION)] clean - end'
+	echo '[Hynis v$(VERSION)] clean - end'
 
 		
 

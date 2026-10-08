@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Esta versão de controle (código %d) não está implementada nesta compilação do inicializador.";
 "custom_controls.hint" = "Pressione e segure em qualquer lugar na tela para mais opções";
 
-"init.migrateDir" = "O diretório de dados do Amethyst agora é %@. Todos os dados existentes foram movidos para a nova localização.";
+"init.migrateDir" = "O diretório de dados do Hynis agora é %@. Todos os dados existentes foram movidos para a nova localização.";
 
 "launcher.mcl.downloading_file" = "Baixando %@";
 
@@ -116,8 +116,8 @@
 "preference.title.debug_logging" = "Log de depuração";
 "preference.title.jitstreamer_server" = "IP do servidor JitStreamer";
 "preference.title.appicon" = "Definir ícone do aplicativo";
-"preference.title.appicon-default" = "Luz familiar de Amethyst";
-"preference.title.appicon-dark" = "Amethyst familiar escuro";
+"preference.title.appicon-default" = "Luz familiar de Hynis";
+"preference.title.appicon-dark" = "Hynis familiar escuro";
 
 "preference.title.reset_warnings" = "Redefinir todos os avisos";
 "preference.title.done.reset_warnings" = "Todas as advertências foram redefinidas.";

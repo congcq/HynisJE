@@ -58,13 +58,13 @@
 "custom_controls.error.incompatible" = "Cette version de contrôle (code %d) n'est pas implémentée dans cette version du launcher.";
 "custom_controls.hint" = "Appuyez longuement n'importe où sur l'écran pour plus d'options";
 
-"init.migrateDir" = "Le répertoire de données Amethyst est maintenant %@. Toutes vos données existantes ont été déplacées vers le nouvel emplacement.";
+"init.migrateDir" = "Le répertoire de données Hynis est maintenant %@. Toutes vos données existantes ont été déplacées vers le nouvel emplacement.";
 
 "launcher.menu.custom_controls" = "Contrôles personnalisés";
 "launcher.menu.install_jar" = "Installer le .jar";
 
 "launcher.wait_jit.title" = "Attente du JIT";
-"launcher.wait_jit.message" = "Amethyst s'appuie sur la compilation Just-in-time pour que Java fonctionne avec des performances maximales.";
+"launcher.wait_jit.message" = "Hynis s'appuie sur la compilation Just-in-time pour que Java fonctionne avec des performances maximales.";
 
 "login.error.username.outOfRange" = "Le nom d'utilisateur doit comporter au moins 3 caractères et 16 caractères maximum";
 
@@ -124,9 +124,9 @@
 "preference.title.jitstreamer_server" = "IP du serveur JitStreamer";
 "preference.detail.jitstreamer_server" = "Vous permet de passer à une adresse IP personnalisée du serveur JitStreamer, par exemple pour les instances auto-hébergées. Cette option peut être laissée si vous utilisez les serveurs JitStreamer par défaut.";
 "preference.title.appicon" = "Définir l'icône de l'app";
-"preference.detail.appicon" = "Vous permet de choisir entre différentes icônes d'écran d'accueil pour Amethyst.";
-"preference.title.appicon-default" = "Amethyst clair familier";
-"preference.title.appicon-dark" = "Amethyst sombre familier";
+"preference.detail.appicon" = "Vous permet de choisir entre différentes icônes d'écran d'accueil pour Hynis.";
+"preference.title.appicon-default" = "Hynis clair familier";
+"preference.title.appicon-dark" = "Hynis sombre familier";
 "preference.title.hidden_sidebar" = "Masquer la barre latérale du menu principal par défaut";
 "preference.detail.hidden_sidebar" = "Vous permet de masquer la barre latérale dans le menu principal par défaut et lors de la rotation sur iOS 14 et plus récent.";
 

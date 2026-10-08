@@ -58,7 +58,7 @@
 "custom_controls.error.incompatible" = "Phiên bản điều khiển (code %d) không tương thích với bản launcher này.";
 "custom_controls.hint" = "Nhấn giữ trên màn hình để hiện thêm tùy chọn";
 
-"init.migrateDir" = "Đường dẫn dữ liệu của Amethyst bây giờ là %@. Tất cả dữ liệu đã có của bạn đã được chuyển đến địa chỉ mới.";
+"init.migrateDir" = "Đường dẫn dữ liệu của Hynis bây giờ là %@. Tất cả dữ liệu đã có của bạn đã được chuyển đến địa chỉ mới.";
 
 "launcher.mcl.downloading_file" = "Đang tải xuống%@";
 "launcher.mcl.error_download" = "Không thể tải xuống %@:%@";
@@ -67,7 +67,7 @@
 "launcher.menu.install_jar" = "Cài đặt tệp .jar";
 
 "launcher.wait_jit.title" = "Đang đợi JIT";
-"launcher.wait_jit.message" = "Amethyst phụ thuộc vào JIT để Java hoạt động ở mức tối đa hiệu năng.";
+"launcher.wait_jit.message" = "Hynis phụ thuộc vào JIT để Java hoạt động ở mức tối đa hiệu năng.";
 
 "login.error.username.outOfRange" = "Tên người dùng phải có từ 3 đến 16 kí tự";
 
@@ -87,9 +87,9 @@
 "login.option.microsoft" = "Tài khoản Microsoft";
 "login.option.local" = "Tài khoản nội bộ";
 
-"login.warn.title.legacy_device" = "Bản phát hành tiếp theo của Amethyst sẽ không tương thích với thiết bị này.";
+"login.warn.title.legacy_device" = "Bản phát hành tiếp theo của Hynis sẽ không tương thích với thiết bị này.";
 "login.warn.message.legacy_device" = "Để chạy bản phát hành chính tiếp theo, cần có một thiết bị có khả năng chạy iOS 14.";
-"login.warn.title.legacy_ios" = "Bản phát hành tiếp theo của Amethyst sẽ yêu cầu cập nhật hệ thống.";
+"login.warn.title.legacy_ios" = "Bản phát hành tiếp theo của Hynis sẽ yêu cầu cập nhật hệ thống.";
 "login.warn.message.legacy_ios" = "Để chạy bản phát hành chính tiếp theo, thiết bị này cần chạy iOS 14 trở lên.";
 "login.warn.title.limited_ram" = "Thiết bị này có một lượng bộ nhớ khả dụng hạn chế.";
 "login.warn.message.limited_ram" = "Chúng tôi khuyên bạn nên bật RAM tự động để tránh các vấn đề về hiệu suất và tính không ổn định.";
@@ -117,7 +117,7 @@
 
 "preference.section.general" = "Cài đặt chung";
 "preference.section.video" = "Cài đặt hình ảnh";
-"preference.section.footer.video" = "Trình kết xuất tự động cho phép Amethyst chọn tùy chọn tốt nhất dựa trên phiên bản Minecraft. Giảm độ phân giải làm giảm khối lượng công việc GPU để có hiệu suất tốt hơn.";
+"preference.section.footer.video" = "Trình kết xuất tự động cho phép Hynis chọn tùy chọn tốt nhất dựa trên phiên bản Minecraft. Giảm độ phân giải làm giảm khối lượng công việc GPU để có hiệu suất tốt hơn.";
 "preference.section.control" = "Tuỳ chỉnh bộ điều khiển";
 "preference.section.debug" = "Cài đặt gỡ lỗi UI";
 "preference.section.footer.debug" = "Ngoài gỡ lỗi, những cài đặt này có thể giúp ích cho tùy biến điều khiển. Bạn có thể phải khởi động lại launcher.";
@@ -140,11 +140,11 @@
 "preference.title.jitstreamer_server" = "IP server JITStreamer";
 "preference.detail.jitstreamer_server" = "Cho phép thay đổi địa chỉ IP của máy chủ JitStreamer với những máy chủ tự do. Bỏ qua tùy chọn này nếu bạn sử dụng máy chủ JitStreamer mặc định.";
 "preference.title.enable_altkit" = "Bật tích hợp AltKit";
-"preference.detail.enable_altkit" = "Khi được bật, Amethyst sẽ cố gắng kết nối với Máy chủ thay thế cục bộ để bật JIT.";
+"preference.detail.enable_altkit" = "Khi được bật, Hynis sẽ cố gắng kết nối với Máy chủ thay thế cục bộ để bật JIT.";
 "preference.title.appicon" = "Thay đổi icon";
-"preference.detail.appicon" = "Cho phép bạn thay đổi icon màn hình chính cho Amethyst.";
-"preference.title.appicon-default" = "Amethyst, chủ đề sáng";
-"preference.title.appicon-dark" = "Amethyst, chủ đề tối";
+"preference.detail.appicon" = "Cho phép bạn thay đổi icon màn hình chính cho Hynis.";
+"preference.title.appicon-default" = "Hynis, chủ đề sáng";
+"preference.title.appicon-dark" = "Hynis, chủ đề tối";
 "preference.title.appicon-development" = "Phát triển bút chì";
 "preference.title.hidden_sidebar" = "Mặc định ẩn thanh bên";
 "preference.detail.hidden_sidebar" = "Cho phép bạn ẩn thanh bên trên menu chính theo mặc định và khi xoay.";
@@ -182,7 +182,7 @@
 "preference.title.fullscreen_airplay" = "AirPlay toàn màn hình";
 "preference.detail.fullscreen_airplay" = "Cho phép chiếu toàn màn hình cửa sổ game thay vì chiếu mọi thứ trên màn hình ngoài.";
 "preference.title.silence_other_audio" = "Tạm dừng âm thanh khi trò chơi mở ra";
-"preference.detail.silence_other_audio" = "Bật để cho phép Amethyst tạm dừng âm thanh từ các ứng dụng khác, chẳng hạn như Âm nhạc, khi khởi chạy trò chơi.";
+"preference.detail.silence_other_audio" = "Bật để cho phép Hynis tạm dừng âm thanh từ các ứng dụng khác, chẳng hạn như Âm nhạc, khi khởi chạy trò chơi.";
 "preference.title.silence_with_switch" = "Tắt âm thanh bằng công tắc im lặng";
 "preference.detail.silence_with_switch" = "Bật để tắt âm thanh khi Chế độ im lặng được bật. Tai nghe và loa ngoài không bị ảnh hưởng.";
 "preference.title.default_gamepad_ctrl" = "Cấu hình bộ điều khiển";

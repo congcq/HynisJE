@@ -58,13 +58,13 @@
 "custom_controls.error.incompatible" = "Bu kontrol sürümü (kod %d) bu başlatıcı sürümünde uygulanmadı.";
 "custom_controls.hint" = "Daha çok seçenek için ekranın herhangi bir yerinde basılı tut";
 
-"init.migrateDir" = "Amethyst veri dosyası artık %@. Önceden varolan bütün verilerin yeni konuma taşındı.";
+"init.migrateDir" = "Hynis veri dosyası artık %@. Önceden varolan bütün verilerin yeni konuma taşındı.";
 
 "launcher.menu.custom_controls" = "Özel kontroller";
 "launcher.menu.install_jar" = ".jar kur";
 
 "launcher.wait_jit.title" = "JIT için bekleniyor";
-"launcher.wait_jit.message" = "Amethyst, Java'nın maksimum performansta çalışması için Just-in-time derlemeye dayanır.";
+"launcher.wait_jit.message" = "Hynis, Java'nın maksimum performansta çalışması için Just-in-time derlemeye dayanır.";
 
 "login.error.username.outOfRange" = "Kullanıcı adı en az 3 en fazla da 16 karakter olmalıdır";
 
@@ -125,9 +125,9 @@
 "preference.detail.jitstreamer_server" = "Özel bir Jit Streamer suncu IP'sine geçmenizi sağlar, kendi kendini barındıran kurulumlar için gibi.
 Bu seçenek varsayılan JitStreamer sunucusunu kullanıyorsanız olduğu gibi bırakılabilir.";
 "preference.title.appicon" = "Uygulama simgesini ayarla";
-"preference.detail.appicon" = "Amethyst için farklı Ana Ekran simgeleri arasında seçim yapmanızı sağlar.";
-"preference.title.appicon-default" = "Göze aşina Amethyst açık";
-"preference.title.appicon-dark" = "Göze aşina Amethyst karanlık";
+"preference.detail.appicon" = "Hynis için farklı Ana Ekran simgeleri arasında seçim yapmanızı sağlar.";
+"preference.title.appicon-default" = "Göze aşina Hynis açık";
+"preference.title.appicon-dark" = "Göze aşina Hynis karanlık";
 "preference.title.hidden_sidebar" = "Ana menü kenar çubuğunu varsayılan olarak gizle";
 
 "preference.title.reset_warnings" = "Tüm uyarıları sıfırla";

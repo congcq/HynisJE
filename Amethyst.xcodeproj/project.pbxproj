@@ -43,17 +43,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		054957C52986E8DC00EFD4CE /* Angel Aura Amethyst */ = {
+		054957C52986E8DC00EFD4CE /* Hynis */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "-j$(sysctl -n hw.ncpu) dsym package";
-			buildConfigurationList = 054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Angel Aura Amethyst" */;
+			buildConfigurationList = 054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Hynis" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/gmake;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = "Angel Aura Amethyst";
+			name = "Hynis";
 			passBuildSettingsInEnvironment = 1;
 			productName = PojavLauncher;
 		};
@@ -71,7 +71,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 054957C42986E8DC00EFD4CE /* Build configuration list for PBXProject "Amethyst" */;
+			buildConfigurationList = 054957C42986E8DC00EFD4CE /* Build configuration list for PBXProject "Hynis" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -83,7 +83,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				054957C52986E8DC00EFD4CE /* Angel Aura Amethyst */,
+				054957C52986E8DC00EFD4CE /* Hynis */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +138,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		054957C42986E8DC00EFD4CE /* Build configuration list for PBXProject "Amethyst" */ = {
+		054957C42986E8DC00EFD4CE /* Build configuration list for PBXProject "Hynis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054957C62986E8DC00EFD4CE /* Debug */,
@@ -147,7 +147,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Angel Aura Amethyst" */ = {
+		054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Hynis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054957C92986E8DC00EFD4CE /* Debug */,

@@ -17,7 +17,7 @@ body:
   attributes:
     label: The log file and images/videos
     description: |
-      The log file called `latestlog.txt` is located in the Files app > Amethyst. |
+      The log file called `latestlog.txt` is located in the Files app > Hynis. |
       You can also upload here screenshots or videos of the buggy behavior, if possible.
       
       Tip: You can attach files by clicking this area to highlight it and then dragging files in or select them on 🖼 option at the toolbar.
@@ -29,7 +29,7 @@ body:
     label: Steps To Reproduce
     description: Steps to reproduce the behavior.
     placeholder: |
-      1. Start Amethyst
+      1. Start Hynis
       ... *(your set of actions to reproduce the bug)*
     render: markdown
   validations:
@@ -50,11 +50,11 @@ body:
       Examples:
         - **Device model**: iPhone 7
         - **iOS version**: 14.7
-        - **Amethyst version**: [Latest Release || version 1.3 ]
+        - **Hynis version**: [Latest Release || version 1.3 ]
     value: |
         - Device model: 
         - iOS version: 
-        - Amethyst version: 
+        - Hynis version: 
     render: markdown
   validations:
     required: true

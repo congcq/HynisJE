@@ -2,9 +2,9 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>org.angelauramc.amethyst</string>
+	<string>io.github.congcq.hynis</string>
 <key>com.apple.private.security.container-required</key>
-	<string>org.angelauramc.amethyst</string>
+	<string>io.github.congcq.hynis</string>
     <key>get-task-allow</key>
     <true/>
 

@@ -2,7 +2,7 @@
 <plist version="1.0">
 <dict>
     <key>application-identifier</key>
-    <string>org.angelauramc.amethyst</string>
+    <string>io.github.congcq.hynis</string>
     <key>get-task-allow</key>
     <true/>
 
@@ -11,7 +11,7 @@
     <key>com.apple.developer.kernel.increased-memory-limit</key>
     <true/>
 
-    <!-- iOS may treat Amethyst as system app (if previously installed before under Debian package), which requires these entitlement -->
+    <!-- iOS may treat Hynis as system app (if previously installed before under Debian package), which requires these entitlement -->
     <key>com.apple.private.mobileinstall.upgrade-enabled</key>
     <true/>
 
@@ -19,7 +19,7 @@
     <key>com.apple.private.memorystatus</key>
     <true/>
 
-    <!-- Disable sandbox so that Amethyst can enable JIT by itself -->
+    <!-- Disable sandbox so that Hynis can enable JIT by itself -->
     <key>com.apple.private.security.no-sandbox</key>
     <true/>
 
