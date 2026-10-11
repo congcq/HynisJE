@@ -49,7 +49,7 @@
 			buildConfigurationList = 054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Hynis" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/local/bin/cmake;
+			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);

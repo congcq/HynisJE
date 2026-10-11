@@ -160,7 +160,7 @@ METHOD_JAVA_UNPACK = \
 	cd $(SOURCEDIR)/depends; \
 	if [ ! -f "java-$(1)-openjdk/release" ] && [ ! -f "$(ls jre$(1)-*.tar.xz)" ]; then \
 		if [ "$(RUNNER)" != "1" ]; then \
-			wget '$(2)' -q --show-progress; \
+			curl -OJfSL '$(2)'; \
 			unzip jre*-ios-aarch64.zip && rm jre*-ios-aarch64.zip; \
 		fi; \
 		mkdir -p java-$(1)-openjdk; \
@@ -200,8 +200,8 @@ ifneq ($(call METHOD_DEPCHECK,ldid),1)
 $(error You need to install ldid)
 endif
 
-ifneq ($(call METHOD_DEPCHECK,wget --version),1)
-$(error You need to install wget)
+ifneq ($(call METHOD_DEPCHECK,curl --version),1)
+$(error You need to install curl)
 endif
 
 ifeq ($(DETECTPLAT),Linux)
