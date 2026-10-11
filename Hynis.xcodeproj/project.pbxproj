@@ -49,12 +49,12 @@
 			buildConfigurationList = 054957C82986E8DC00EFD4CE /* Build configuration list for PBXLegacyTarget "Hynis" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/local/bin/gmake;
+			buildToolPath = /usr/local/bin/cmake;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = "Hynis";
-			passBuildSettingsInEnvironment = 1;
+			name = Hynis;
+			passBuildSettingsInEnvironment = 0;
 			productName = PojavLauncher;
 		};
 /* End PBXLegacyTarget section */
