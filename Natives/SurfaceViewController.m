@@ -658,7 +658,7 @@ static GameSurfaceView* pojavWindow;
 }
 
 - (UIPointerStyle *)pointerInteraction:(UIPointerInteraction *)interaction styleForRegion:(UIPointerRegion *)region {
-    return isGrabbing ? [UIPointerStyle hidden] : nil;
+    return isGrabbing ? [UIPointerStyle hiddenPointerStyle] : nil;
 }
 
 - (void)registerMouseCallbacks:(GCMouse *)mouse {
