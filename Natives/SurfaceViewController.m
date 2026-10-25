@@ -32,7 +32,7 @@ int memorystatus_control(uint32_t command, int32_t pid, uint32_t flags, void *bu
 static int currentHotbarSlot = -1;
 static GameSurfaceView* pojavWindow;
 
-@interface SurfaceViewController ()<UITextFieldDelegate, UIGestureRecognizerDelegate> {
+@interface SurfaceViewController ()<UITextFieldDelegate, UIGestureRecognizerDelegate, UIPointerInteractionDelegate> {
 }
 
 @property(nonatomic) NSDictionary* metadata;
@@ -58,6 +58,7 @@ static GameSurfaceView* pojavWindow;
 
 @property(nonatomic) UIImpactFeedbackGenerator *lightHaptic;
 @property(nonatomic) UIImpactFeedbackGenerator *mediumHaptic;
+@property(nonatomic) UIPointerInteraction *surfacePointerInteraction;
 
 @end
 
@@ -120,6 +121,8 @@ static GameSurfaceView* pojavWindow;
     self.surfaceView.layer.magnificationFilter = self.surfaceView.layer.minificationFilter = kCAFilterNearest;
     self.surfaceView.multipleTouchEnabled = YES;
     pojavWindow = self.surfaceView;
+    self.surfacePointerInteraction = [[UIPointerInteraction alloc] initWithDelegate:self];
+    [self.surfaceView addInteraction:self.surfacePointerInteraction];
 
     self.touchView = [[UIView alloc] initWithFrame:self.view.frame];
     self.touchView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
@@ -209,6 +212,7 @@ static GameSurfaceView* pojavWindow;
         GCMouse* mouse = note.object;
         [self registerMouseCallbacks:mouse];
         self.mousePointerView.hidden = isGrabbing || !virtualMouseEnabled;
+        [self.surfacePointerInteraction invalidate];
         [self setNeedsUpdateOfPrefersPointerLocked];
     }];
     self.mouseDisconnectCallback = [[NSNotificationCenter defaultCenter] addObserverForName:GCMouseDidDisconnectNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
@@ -419,6 +423,7 @@ static GameSurfaceView* pojavWindow;
     }
     self.scrollPanGesture.enabled = !isGrabbing;
     self.mousePointerView.hidden = isGrabbing || !virtualMouseEnabled;
+    [self.surfacePointerInteraction invalidate];
     [self setNeedsUpdateOfPrefersPointerLocked];
 
     // Update buttons visibility
@@ -652,10 +657,14 @@ static GameSurfaceView* pojavWindow;
     return GCMouse.mice.count > 0 && (isGrabbing || virtualMouseEnabled);
 }
 
+- (UIPointerStyle *)pointerInteraction:(UIPointerInteraction *)interaction styleForRegion:(UIPointerRegion *)region {
+    return isGrabbing ? [UIPointerStyle hidden] : nil;
+}
+
 - (void)registerMouseCallbacks:(GCMouse *)mouse {
     NSLog(@"Input: Got mouse %@", mouse);
     mouse.mouseInput.mouseMovedHandler = ^(GCMouseInput * _Nonnull mouse, float deltaX, float deltaY) {
-        if (!self.view.window.windowScene.pointerLockState.locked) {
+        if (!isGrabbing) {
             return;
         }
         [self sendTouchPoint:CGPointMake(deltaX, -deltaY) withEvent:ACTION_MOVE_MOTION];
