@@ -664,7 +664,7 @@ static GameSurfaceView* pojavWindow;
 - (void)registerMouseCallbacks:(GCMouse *)mouse {
     NSLog(@"Input: Got mouse %@", mouse);
     mouse.mouseInput.mouseMovedHandler = ^(GCMouseInput * _Nonnull mouse, float deltaX, float deltaY) {
-        if (!isGrabbing) {
+        if (!self.view.window.windowScene.pointerLockState.locked) {
             return;
         }
         [self sendTouchPoint:CGPointMake(deltaX, -deltaY) withEvent:ACTION_MOVE_MOTION];
