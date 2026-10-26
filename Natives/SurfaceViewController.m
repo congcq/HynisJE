@@ -47,6 +47,7 @@ static GameSurfaceView* pojavWindow;
 
 @property(nonatomic) id mouseConnectCallback, mouseDisconnectCallback;
 @property(nonatomic) id controllerConnectCallback, controllerDisconnectCallback;
+@property(nonatomic) id pointerLockStateCallback;
 
 @property(nonatomic) CGFloat screenScale;
 @property(nonatomic) CGFloat mouseSpeed;
@@ -59,6 +60,8 @@ static GameSurfaceView* pojavWindow;
 @property(nonatomic) UIImpactFeedbackGenerator *lightHaptic;
 @property(nonatomic) UIImpactFeedbackGenerator *mediumHaptic;
 @property(nonatomic) UIPointerInteraction *surfacePointerInteraction;
+
+- (void)logPointerLockStatus:(NSString *)reason;
 
 @end
 
@@ -207,6 +210,9 @@ static GameSurfaceView* pojavWindow;
     self.swipeableButtons = [[NSMutableArray alloc] init];
 
     [KeyboardInput initKeycodeTable];
+    self.pointerLockStateCallback = [[NSNotificationCenter defaultCenter] addObserverForName:UIPointerLockStateDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        [self logPointerLockStatus:@"state-change"];
+    }];
     self.mouseConnectCallback = [[NSNotificationCenter defaultCenter] addObserverForName:GCMouseDidConnectNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         NSLog(@"Input: Mouse connected!");
         GCMouse* mouse = note.object;
@@ -278,6 +284,20 @@ static GameSurfaceView* pojavWindow;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self setNeedsUpdateOfPrefersPointerLocked];
+    [self logPointerLockStatus:@"view-did-appear"];
+}
+
+- (void)logPointerLockStatus:(NSString *)reason {
+    UIWindowScene *scene = self.view.window.windowScene;
+    BOOL pointerLocked = scene != nil && scene.pointerLockState.locked;
+    NSInteger activationState = scene != nil ? scene.activationState : -1;
+    NSLog(@"PointerLock: reason=%@ grabbing=%d prefers=%d locked=%d sceneActivationState=%ld mouseCount=%lu",
+          reason,
+          isGrabbing,
+          self.prefersPointerLocked,
+          pointerLocked,
+          (long)activationState,
+          (unsigned long)GCMouse.mice.count);
 }
 
 - (void)updateAudioSettings {
@@ -425,6 +445,7 @@ static GameSurfaceView* pojavWindow;
     self.mousePointerView.hidden = isGrabbing || !virtualMouseEnabled;
     [self.surfacePointerInteraction invalidate];
     [self setNeedsUpdateOfPrefersPointerLocked];
+    [self logPointerLockStatus:@"grab-state-updated"];
 
     // Update buttons visibility
     [self updateControlHiddenState:NO];
