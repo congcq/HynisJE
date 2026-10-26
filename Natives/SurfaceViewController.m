@@ -654,7 +654,7 @@ static GameSurfaceView* pojavWindow;
 }
 
 - (BOOL)prefersPointerLocked {
-    return GCMouse.mice.count > 0 && (isGrabbing || virtualMouseEnabled);
+    return isGrabbing || (GCMouse.mice.count > 0 && virtualMouseEnabled);
 }
 
 - (UIPointerStyle *)pointerInteraction:(UIPointerInteraction *)interaction styleForRegion:(UIPointerRegion *)region {
