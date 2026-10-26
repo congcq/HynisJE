@@ -48,6 +48,7 @@ static GameSurfaceView* pojavWindow;
 @property(nonatomic) id mouseConnectCallback, mouseDisconnectCallback;
 @property(nonatomic) id controllerConnectCallback, controllerDisconnectCallback;
 @property(nonatomic) id pointerLockStateCallback;
+@property(nonatomic) id sceneActivationCallback, sceneDeactivationCallback;
 
 @property(nonatomic) CGFloat screenScale;
 @property(nonatomic) CGFloat mouseSpeed;
@@ -62,6 +63,7 @@ static GameSurfaceView* pojavWindow;
 @property(nonatomic) UIPointerInteraction *surfacePointerInteraction;
 
 - (void)logPointerLockStatus:(NSString *)reason;
+- (void)schedulePointerLockStatusLog:(NSString *)reason;
 
 @end
 
@@ -213,6 +215,12 @@ static GameSurfaceView* pojavWindow;
     self.pointerLockStateCallback = [[NSNotificationCenter defaultCenter] addObserverForName:UIPointerLockStateDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         [self logPointerLockStatus:@"state-change"];
     }];
+    self.sceneActivationCallback = [[NSNotificationCenter defaultCenter] addObserverForName:UISceneDidActivateNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        [self logPointerLockStatus:@"scene-did-activate"];
+    }];
+    self.sceneDeactivationCallback = [[NSNotificationCenter defaultCenter] addObserverForName:UISceneWillDeactivateNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        [self logPointerLockStatus:@"scene-will-deactivate"];
+    }];
     self.mouseConnectCallback = [[NSNotificationCenter defaultCenter] addObserverForName:GCMouseDidConnectNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         NSLog(@"Input: Mouse connected!");
         GCMouse* mouse = note.object;
@@ -285,19 +293,30 @@ static GameSurfaceView* pojavWindow;
     [super viewDidAppear:animated];
     [self setNeedsUpdateOfPrefersPointerLocked];
     [self logPointerLockStatus:@"view-did-appear"];
+    [self schedulePointerLockStatusLog:@"view-did-appear-after-update"];
 }
 
 - (void)logPointerLockStatus:(NSString *)reason {
+    UIWindow *window = self.view.window;
     UIWindowScene *scene = self.view.window.windowScene;
     BOOL pointerLocked = scene != nil && scene.pointerLockState.locked;
     NSInteger activationState = scene != nil ? scene.activationState : -1;
-    NSLog(@"PointerLock: reason=%@ grabbing=%d prefers=%d locked=%d sceneActivationState=%ld mouseCount=%lu",
+    NSLog(@"PointerLock: reason=%@ grabbing=%d prefers=%d locked=%d sceneActivationState=%ld windowAttached=%d windowHidden=%d keyWindow=%d mouseCount=%lu",
           reason,
           isGrabbing,
           self.prefersPointerLocked,
           pointerLocked,
           (long)activationState,
+          window != nil,
+          window.hidden,
+          window.isKeyWindow,
           (unsigned long)GCMouse.mice.count);
+}
+
+- (void)schedulePointerLockStatusLog:(NSString *)reason {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self logPointerLockStatus:reason];
+    });
 }
 
 - (void)updateAudioSettings {
@@ -446,6 +465,7 @@ static GameSurfaceView* pojavWindow;
     [self.surfacePointerInteraction invalidate];
     [self setNeedsUpdateOfPrefersPointerLocked];
     [self logPointerLockStatus:@"grab-state-updated"];
+    [self schedulePointerLockStatusLog:@"grab-state-updated-after-update"];
 
     // Update buttons visibility
     [self updateControlHiddenState:NO];
