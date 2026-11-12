@@ -2,10 +2,12 @@
 
 #include <stdlib.h>
 #include "gl_bridge.h"
+#include "mgl_bridge.h"
 #include "osm_bridge.h"
 
 typedef union {
     gl_render_window_t gl;
+    mgl_render_window_t mgl;
     osm_render_window_t osm;
 } basic_render_window_t;
 

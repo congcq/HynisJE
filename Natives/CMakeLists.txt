@@ -107,6 +107,7 @@ add_executable(Hynis
   authenticator/MicrosoftAuthenticator.m
 
   ctxbridges/gl_bridge.m
+  ctxbridges/mgl_bridge.m
   ctxbridges/osm_bridge.m
  
   customcontrols/ControlButton.m

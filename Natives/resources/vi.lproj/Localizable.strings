@@ -163,12 +163,13 @@
 "preference.title.renderer" = "Trình kết xuất";
 
 "preference.title.renderer.release.auto" = "Tự động";
-"preference.title.renderer.release.gl4es" = "gl4es Thần Thánh";
-"preference.title.renderer.release.angle" = "GÓC";
-"preference.title.renderer.release.zink" = "Kẽm";
+"preference.title.renderer.release.gl4es" = "gl4es";
+"preference.title.renderer.release.angle" = "tinyangle";
+"preference.title.renderer.release.zink" = "Zink";
 
 "preference.title.renderer.debug.auto" = "Tự động: gl4es hoặc ANGLE";
 "preference.title.renderer.debug.gl4es" = "gl4es 1.1.4 - xuất ra OpenGL 2.1";
+"preference.title.renderer.debug.gl4metal" = "GL4Metal (1.17+) - xuất ra OpenGL 3.3 (Core Profile), THỬ NGHIỆM";
 "preference.title.renderer.debug.angle" = "tinygl4angle (1.17+) - xuất ra OpenGL 3.2 (Core Profile, bị giới hạn)";
 "preference.title.renderer.debug.zink" = "Zink (Mesa 21.0) - xuất ra OpenGL 4.1";
 

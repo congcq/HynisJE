@@ -56,6 +56,10 @@ int pojavInitOpenGL() {
         renderer = @ RENDERER_NAME_GL4ES;
         setenv("HYNIS_RENDERER", renderer.UTF8String, 1);
         set_gl_bridge_tbl();
+    } else if ([renderer isEqualToString:@ RENDERER_NAME_GL4METAL]) {
+        renderer = @ RENDERER_NAME_GL4METAL;
+        setenv("HYNIS_RENDERER", renderer.UTF8String, 1);
+        set_mgl_bridge_tbl();
     } else if ([renderer isEqualToString:@ RENDERER_NAME_MOBILEGLUES]) {
         renderer = @ RENDERER_NAME_MOBILEGLUES;
         setenv("HYNIS_RENDERER", renderer.UTF8String, 1);
