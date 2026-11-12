@@ -206,7 +206,7 @@
 "preference.title.allow_microphone" = "Allow microphone input";
 "preference.detail.allow_microphone" = "Enable this only if you are using voice chat mod. Silent switch option will be ignored, and audio quality from other apps will be affected.";
 "preference.title.fix_simple_voice_chat" = "Fix Simple Voice Chat mod";
-'preference.detail.fix_simple_voice_chat" = "Enable this only if you are using simple voice chat mod. Allow microphone input option ís required.";
+"preference.detail.fix_simple_voice_chat" = "Enable this only if you are using simple voice chat mod. Allow microphone input option ís required.";
 "preference.title.default_gamepad_ctrl" = "Controller configuration";
 "preference.title.hardware_hide" = "Hide controls when hardware is connected";
 "preference.detail.hardware_hide" = "Enable the behaviour of automatically disabling the on-screen control overlay when a mouse or game controller is connected.";
