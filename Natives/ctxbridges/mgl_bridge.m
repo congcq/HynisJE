@@ -41,10 +41,21 @@ void mgl_make_current(basic_render_window_t *bundle) {
     }
 
     mgl_render_window_t *mgl_bundle = (mgl_render_window_t *)bundle;
-    if (handle.glMakeCurrent) {
-        handle.glMakeCurrent(mgl_bundle->layer);
-        currentBundle = bundle;
+    if (!handle.gl4metalInit()) {
+        if (handle.glMakeCurrent) handle.glMakeCurrent(NULL);
+        currentBundle = NULL;
+        NSDebugLog(@"GL4Metal bridge: failed to initialize the calling thread's Metal context");
+        return;
     }
+
+    if (!handle.glMakeCurrent || !mgl_bundle->layer) {
+        currentBundle = NULL;
+        NSDebugLog(@"GL4Metal bridge: can not make a context current");
+        return;
+    }
+
+    handle.glMakeCurrent(mgl_bundle->layer);
+    currentBundle = bundle;
 }
 
 void mgl_swap_buffers() {
