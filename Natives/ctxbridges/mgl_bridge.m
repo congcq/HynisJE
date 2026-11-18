@@ -26,7 +26,7 @@ basic_render_window_t* mgl_init_context(basic_render_window_t *share) {
     mgl_render_window_t* bundle = calloc(1, sizeof(mgl_render_window_t));
     if (!bundle) return NULL;
 
-    CAMetalLayer *layer = SurfaceViewController.surface.layer;
+    CALayer *layer = SurfaceViewController.surface.layer;
     bundle->layer = (__bridge void *)layer;
     bundle->context = (void *)1; // dummy value, as the context is managed by the Metal layer
 
