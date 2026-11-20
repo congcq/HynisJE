@@ -523,7 +523,6 @@ public class GLFW
     static {
         try {
             System.load(System.getenv("BUNDLE_PATH") + "/Hynis");
-            nativeInitializeGLFWNativeBridge();
         } catch (UnsatisfiedLinkError e) {
             e.printStackTrace();
         }
