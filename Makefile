@@ -281,7 +281,7 @@ payload: native java jre assets
 	cp $(WORKINGDIR)/*.dylib $(WORKINGDIR)/Hynis.app/Frameworks/ || exit 1
 	cp -R $(SOURCEDIR)/JavaApp/libs/others/* $(WORKINGDIR)/Hynis.app/libs/ || exit 1
 	cp $(SOURCEDIR)/JavaApp/build/*.jar $(WORKINGDIR)/Hynis.app/libs/ || exit 1
-	#mv $(WORKINGDIR)/Hynis.app/libs/lwjgl-*.jar $(WORKINGDIR)/Hynis.app/libs/lwjgl/ || exit 1
+	mv $(WORKINGDIR)/Hynis.app/libs/lwjgl-*.jar $(WORKINGDIR)/Hynis.app/libs/lwjgl/ || exit 1
 	rm -rf $(WORKINGDIR)/Hynis.app/libs/lwjgl-*.jar || exit 1
 	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo/* $(WORKINGDIR)/Hynis.app/libs_caciocavallo || exit 1
 	cp -R $(SOURCEDIR)/JavaApp/libs/caciocavallo17/* $(WORKINGDIR)/Hynis.app/libs_caciocavallo17 || exit 1
