@@ -28,14 +28,6 @@ $(OUTPUTDIR)/launcher.jar: $(CLASSES)
 	@echo "Creating $@"
 	@$(BOOTJDK)/jar -cf $@ -C $(basename $@) .
 
-$(OUTPUTDIR)/lwjgl-3.3.6.jar: $(CLASSES)
-	@set -e
-	@echo "Creating $@"
-	@mkdir -p $(OUTPUTDIR)/lwjgl-3.3.6_lib
-	@cd $(OUTPUTDIR)/lwjgl-3.3.6_lib && find ../../libs/lwjgl-3.3.6 -name 'lwjgl*.jar' -exec $(BOOTJDK)/jar -xf {} \; && rm -rf META-INF
-	@cp -R $(OUTPUTDIR)/lwjgl-3.3.6/* $(OUTPUTDIR)/lwjgl-3.3.6_lib/
-	@$(BOOTJDK)/jar -cf $@ -C $(OUTPUTDIR)/lwjgl-3.3.6_lib .
-
 $(OUTPUTDIR)/lwjgl-3.4.1.jar: $(CLASSES)
 	@set -e
 	@echo "Creating $@"
