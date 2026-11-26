@@ -84,11 +84,10 @@ static GameSurfaceView* pojavWindow;
     //setPrefBool(@"internal.internal_launch_on_boot", NO);
 
     UIApplication.sharedApplication.idleTimerDisabled = YES;
-    BOOL isTVOS = realUIIdiom == UIUserInterfaceIdiomTV;
-    if (!isTVOS) {
-        [self setNeedsUpdateOfScreenEdgesDeferringSystemGestures];
-        [self setNeedsUpdateOfHomeIndicatorAutoHidden];
-    }
+
+    [self setNeedsUpdateOfScreenEdgesDeferringSystemGestures];
+    [self setNeedsStatusBarAppearanceUpdate];
+    [self setNeedsUpdateOfHomeIndicatorAutoHidden];
 
     // Perform Gamepad joystick ticking, while also controlling frame rate?
     id tickInput = ^{
@@ -277,6 +276,9 @@ static GameSurfaceView* pojavWindow;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self setNeedsUpdateOfScreenEdgesDeferringSystemGestures];
+    [self setNeedsStatusBarAppearanceUpdate];
+    [self setNeedsUpdateOfHomeIndicatorAutoHidden];
     [self setNeedsUpdateOfPrefersPointerLocked];
 }
 
@@ -1065,6 +1067,18 @@ int touchesMovedCount;
 
 + (GameSurfaceView *)surface {
     return pojavWindow;
+}
+
+- (UIRectEdge)preferredScreenEdgesDeferringSystemGestures {
+    return [self isRunning] ? UIRectEdgeAll : UIRectEdgeNone;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return [self isRunning];
+}
+
+- (BOOL)prefersHomeIndicatorAutoHidden {
+    return NO;
 }
 
 @end
