@@ -1,5 +1,7 @@
 SHELL := /bin/bash
 .SHELLFLAGS = -ec
+export CC=clang
+export CXX=clang++
 # Use `make VERBOSE=1` to print commands.
 $(VERBOSE).SILENT:
 
@@ -71,7 +73,7 @@ $(warning Building on iOS. Note that all targets may not compile or require exte
 endif
 else ifeq ($(DETECTPLAT),Linux)
 IOS         := 0
-# SDKPATH presence is checked later
+SDKPATH		?= /usr/share/SDKs/iPhoneOS.sdk
 BOOTJDK     ?= /usr/bin
 $(warning Building on Linux. Note that all targets may not compile or require external components.)
 else
@@ -206,7 +208,7 @@ endif
 
 ifeq ($(DETECTPLAT),Linux)
 ifneq ($(call METHOD_DEPCHECK,lld),1)
-$(error You need to install lld)
+#$(error You need to install lld)
 endif
 endif
 
@@ -267,7 +269,8 @@ native: dep_mg
 		-DCMAKE_OSX_SYSROOT="$(SDKPATH)" \
 		-DCMAKE_OSX_ARCHITECTURES=arm64 \
 		-DCMAKE_OSX_DEPLOYMENT_TARGET=14.0 \
-		-DCMAKE_C_FLAGS="-arch arm64" \
+		-DCMAKE_C_FLAGS="-arch arm64 -isysroot $(SDKPATH) -target arm64-apple-ios14.0" \
+		-DCMAKE_CXX_FLAGS="-arch arm64 -isysroot $(SDKPATH) -target arm64-apple-ios14.0" \
 		-DCONFIG_BRANCH="$(BRANCH)" \
 		-DCONFIG_COMMIT="$(COMMIT)" \
 		-DCONFIG_RELEASE=$(RELEASE) \
@@ -316,7 +319,8 @@ dep_mg:
 		-DCMAKE_OSX_SYSROOT="$(SDKPATH)" \
 		-DCMAKE_OSX_ARCHITECTURES=arm64 \
 		-DCMAKE_OSX_DEPLOYMENT_TARGET=14.0 \
-		-DCMAKE_C_FLAGS="-arch arm64" \
+		-DCMAKE_C_FLAGS="-arch arm64 -isysroot $(SDKPATH) -target arm64-apple-ios14.0" \
+		-DCMAKE_CXX_FLAGS="-arch arm64 -isysroot $(SDKPATH) -target arm64-apple-ios14.0" \
 		$(SOURCEDIR)/Natives/external/MobileGlues/src/main/cpp/
 
 	cmake --build $(WORKINGDIR)/mobileglues --config RelWithDebInfo -j$(JOBS) --target mobileglues

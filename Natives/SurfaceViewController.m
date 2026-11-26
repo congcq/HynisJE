@@ -1069,16 +1069,4 @@ int touchesMovedCount;
     return pojavWindow;
 }
 
-- (UIRectEdge)preferredScreenEdgesDeferringSystemGestures {
-    return [self isRunning] ? UIRectEdgeAll : UIRectEdgeNone;
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return [self isRunning];
-}
-
-- (BOOL)prefersHomeIndicatorAutoHidden {
-    return NO;
-}
-
 @end

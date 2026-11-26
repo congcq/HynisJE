@@ -159,7 +159,7 @@ static CGPoint lastCenterPoint;
     if (!self.menuView.hidden) {
         return 0;
     }
-    return UIRectEdgeBottom | UIRectEdgeRight;
+    return UIRectEdgeAll;
 }
 
 - (BOOL)prefersHomeIndicatorAutoHidden {
