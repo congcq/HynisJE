@@ -90,8 +90,8 @@ void pojavSetWindowHint(int hint, int value) {
                 break;
             // case 4: use Zink?
             default:
-                setenv("HYNIS_RENDERER", RENDERER_NAME_MOBILEGLUES, 1);
-                JNI_LWJGL_changeRenderer(RENDERER_NAME_MOBILEGLUES);
+                setenv("HYNIS_RENDERER", RENDERER_NAME_GL4METAL, 1);
+                JNI_LWJGL_changeRenderer(RENDERER_NAME_GL4METAL);
                 break;
         }
     }
