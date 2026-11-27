@@ -794,7 +794,7 @@ public class GLFW
         return lastCallback;
     }
 
-    public static GLFWIMEStatusCallback glfwSetIMEStatusCallback(@NativeType("GLFWWindow *") long window, @NativeType("GLFWimestatusfun") GLFWIMEStatusCallback cbfun) {
+    public static GLFWIMEStatusCallback glfwSetIMEStatusCallback(@NativeType("GLFWWindow *") long window, @NativeType("GLFWimestatusfun") GLFWIMEStatusCallbackI cbfun) {
         GLFWIMEStatusCallback lastCallback = mGLFWIMEStatusCallback;
         if (cbfun == null) mGLFWIMEStatusCallback = null;
         else mGLFWIMEStatusCallback.create(cbfun);
@@ -802,7 +802,7 @@ public class GLFW
         return lastCallback;
     }
 
-    public static GLFWPreeditCandidateCallback glfwSetPreeditCandidateCallback(@NativeType("GLFWWindow *") long window, @NativeType("GLFWpreeditcandidatefun") GLFWPreeditCandidateCallback cbfun) {
+    public static GLFWPreeditCandidateCallback glfwSetPreeditCandidateCallback(@NativeType("GLFWWindow *") long window, @NativeType("GLFWpreeditcandidatefun") GLFWPreeditCandidateCallbackI cbfun) {
         GLFWPreeditCandidateCallback lastCallback = mGLFWPreeditCandidateCallback;
         if (cbfun == null) mGLFWPreeditCandidateCallback = null;
         else mGLFWPreeditCandidateCallback.create(cbfun);
